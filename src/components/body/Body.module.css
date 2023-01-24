@@ -49,7 +49,7 @@
     right: 0;
     width: 100%;
     z-index: 10;
-    min-height: 80px;
+    min-height: 65px;
 
     display: flex;
     justify-content: center;
@@ -96,8 +96,6 @@
 .header_options{
     color: var(--secondaryColor);
     cursor: pointer;
-    padding : 15px 10px;
-    //margin: 3px;
     font-weight: bold;
     font-size: var(--h2FontSize);
 }

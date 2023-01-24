@@ -128,7 +128,7 @@
   --RepoCardMaxWitdh : 800px;
 
   /* About section variables */
-  --langugeGridTemplateColumn : 25% 75%;
+  --langugeGridTemplateColumn : 30% 70% ;
   --itSkillsGridTempleteColumn : auto auto;
 
   /* Header section variables */

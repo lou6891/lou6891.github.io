@@ -77,16 +77,18 @@ export default function Body({deviceType, theme, setTheme}){
 
                 <div className={ deviceType === "Desktop" ? classes.body_header_container_desktop : classes.body_header_container_mobile}>
 
-                    <ul style={{marginBottom :deviceType === "Desktop" ? "" : "30px"}}>
+                    <ul style={{marginBottom :deviceType === "Desktop" ? "" : "5px"}}>
                         <li className={classes.header_options}
                             onClick={()=>{setActivePage("About")}}
-                            style={{color : activePage === "About" ? "var(--primaryColor)" : ""}}
+                            style={{color : activePage === "About" ? "var(--primaryColor)" : "",
+                                padding : deviceType === "Desktop" ? "15px 10px" : "0 10px 15px 10px"}}
                         >
                             About Me
                         </li>
                         <li className={classes.header_options}
                             onClick={()=>{setActivePage("Portfolio")}}
-                            style={{color : activePage === "Portfolio" ? "var(--primaryColor)" : ""}}
+                            style={{color : activePage === "Portfolio" ? "var(--primaryColor)" : "",
+                                padding : deviceType === "Desktop" ? "15px 10px" : "0 10px 15px 10px"}}
                         >
                             Portfolio
                         </li>

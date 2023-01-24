@@ -11,6 +11,11 @@ const iconSize = "100px"
 
 export default function About({theme}){
 
+
+    // Since I cannot use css varibale in the vertical timeline (IK)
+    // I need tog et the primary color from the div, convert  it into a variable and then pass it to it
+    // THe issue is making so that the user can change theme
+
     const ref = React.useRef()
     const [primaryColor, setPrimaryColor] = React.useState(theme === "dark" ? "#ffffff" : "#525252")
 
@@ -191,20 +196,20 @@ export default function About({theme}){
                         {
                             personal_data["About_Page"]["Languages"].map((language,index)=>{
                                 const length = language[1] === 0 ? 0 : 20*language[1]
+
                                 return(
                                     <div className={classes.language_skills_grid }
-                                         style={{marginTop : index !== 0 ? "15px" : 0}}
+                                         style={{marginTop : index !== 0 ? "15px" : 0, }}
                                          key={index}
                                     >
-                                        <h4 >
+                                        <h4 style={{maxWidth : "100px"}}>
                                         {language[0]}
                                        </h4>
 
-                                        <div className={classes.language_skills_line_div }>
+                                        <div className={classes.language_skills_line_div } >
 
                                            <p style={{width : length.toString() + "%",}}>{language[2]}</p>
                                            <hr style={{ width : length.toString() + "%", }}/>
-
 
                                        </div>
 

@@ -2,8 +2,8 @@
 export const settings = {
 
     DeviceType_setting : {
-        "Desktop" : 1300,
-        "Mobile" : 1024,
+        "Desktop" : 1150,
+        "Mobile" : 500,
     },
 
 
