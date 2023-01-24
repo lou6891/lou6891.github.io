@@ -2,8 +2,8 @@
 
 .card_sections {
     max-width: var(--RepoCardMaxWitdh);
-    height: 100%;
     padding: 2%;
+    width: 100%;
 
     background-color: var(--otherBackgroundColor);
     border-color: var(--contentBorderColor);

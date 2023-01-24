@@ -1,4 +1,4 @@
-import {settings} from "../../settings/settings";
+import {settings} from "../../parameters/settings";
 
 export function sorting_functions(dataToSort){
     try {

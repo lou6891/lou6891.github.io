@@ -14,6 +14,9 @@ export const settings = {
         // Created_date_descending
         // Last_updated
         // Size
-    }
+    },
+
+    LandingPage : "About",
+    //Options : About / Portfolio
 
 }

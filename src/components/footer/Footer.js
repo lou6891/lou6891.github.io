@@ -1,4 +1,4 @@
-import {personal_data} from "../../settings/data"
+import {personal_data} from "../../parameters/data"
 import classes from "./footer.module.css"
 
 export default function Footer(){

@@ -1,6 +1,6 @@
 import React from "react"
 import classes from "./Header.module.css"
-import {personal_data} from "../../settings/data"
+import {personal_data} from "../../parameters/data"
 
 export default function Header({userData,deviceType}){
 

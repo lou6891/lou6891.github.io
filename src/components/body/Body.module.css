@@ -16,10 +16,12 @@
     padding : 3%;
     display: grid;
     grid-template-columns: var(--portoflioGridLayour);
-    grid-row-gap: 2.5rem;
+    grid-row-gap: 40px;
     grid-column-gap: 2.5rem;
     word-wrap: normal;
     justify-content: center;
+    //justify-self: center;
+    justify-items: center;
 }
 
 .goToGit {
@@ -47,6 +49,7 @@
     right: 0;
     width: 100%;
     z-index: 10;
+    min-height: 80px;
 
     display: flex;
     justify-content: center;

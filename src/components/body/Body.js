@@ -3,10 +3,10 @@ import React from "react";
 import Portfolio from "./pages/Portofolio";
 import About from "./pages/About";
 import Theme_toggle from "../theme_toggler/Theme_toggle";
-import {personal_data} from "../../settings/data";
+import {personal_data} from "../../parameters/data";
 import sha1 from 'crypto-js/sha1';
 import {sorting_functions} from "./sorting_functions"
-import {settings} from "../../settings/settings";
+import {settings} from "../../parameters/settings";
 export default function Body({deviceType, theme, setTheme}){
 
     // set header style
@@ -15,7 +15,7 @@ export default function Body({deviceType, theme, setTheme}){
         else { return  { height : "10px" } }
     }
 
-    const [activePage, setActivePage] = React.useState("Portfolio")
+    const [activePage, setActivePage] = React.useState(settings.LandingPage)
 
 
     // Data call for the data of the repositories of the user
@@ -77,7 +77,7 @@ export default function Body({deviceType, theme, setTheme}){
 
                 <div className={ deviceType === "Desktop" ? classes.body_header_container_desktop : classes.body_header_container_mobile}>
 
-                    <ul>
+                    <ul style={{marginBottom :deviceType === "Desktop" ? "" : "30px"}}>
                         <li className={classes.header_options}
                             onClick={()=>{setActivePage("About")}}
                             style={{color : activePage === "About" ? "var(--primaryColor)" : ""}}
@@ -103,10 +103,10 @@ export default function Body({deviceType, theme, setTheme}){
 
 
             {
-                activePage === "Portfolio" ? <Portfolio repositoryData={repositoryData}/> : ""
+                activePage === "Portfolio" ? <Portfolio repositoryData={repositoryData} deviceType={deviceType}/> : ""
             }
             {
-                activePage === "About" ? <About/> : ""
+                activePage === "About" ? <About theme={theme}/> : ""
             }
 
         </section>

@@ -3,8 +3,8 @@ import Body from "./components/body/Body";
 import React from "react"
 import './App.css';
 import Loader from "./components/loader/Loader";
-import {personal_data} from "./settings/data"
-import {settings} from "./settings/settings"
+import {personal_data} from "./parameters/data"
+import {settings} from "./parameters/settings"
 import Footer from "./components/footer/Footer";
 const loadingAnimationTime = 1800
 

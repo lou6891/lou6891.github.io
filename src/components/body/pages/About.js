@@ -1,7 +1,7 @@
 import React from "react"
-import {personal_data} from "../../../settings/data";
+import {personal_data} from "../../../parameters/data";
 import classes from "../Body.module.css"
-import {languageSymbols} from "../../languageSymbols";
+import {languageSymbols} from "../../../parameters/languageSymbols";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
@@ -9,22 +9,18 @@ const iconSize = "100px"
 
 // https://stephane-monnot.github.io/react-vertical-timeline/#/
 
-export default function About(){
+export default function About({theme}){
 
-    let ele = document.querySelector('main');
-    let cs = getComputedStyle(ele);
-    let styleProperty = getComputedStyle(ele).getPropertyValue('--secondaryColor')
-    const [primaryColor, setPrimaryColor] = React.useState(cs.getPropertyValue('--primaryColor'))
+    const ref = React.useRef()
+    const [primaryColor, setPrimaryColor] = React.useState(theme === "dark" ? "#ffffff" : "#525252")
+
     React.useEffect(()=>{
-        setPrimaryColor(cs.getPropertyValue('--secondaryColor'))
-    }, [styleProperty]
-    )
+        setPrimaryColor(getComputedStyle(ref.current).getPropertyValue('--secondaryColor'))
+    }, [theme, ref])
 
 
     return (
-        <main className={classes.about_main}>
-
-
+        <main className={classes.about_main} ref={ref}>
 
             { personal_data["About_Page"]["Professional_summary"]
                 ?

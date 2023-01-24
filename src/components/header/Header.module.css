@@ -43,6 +43,9 @@
 }
 
 .header svg{
+    width: 100%;
+    height: 100%;
+    max-height: var(--maxLogosWitdh);
     max-width: var(--maxLogosWitdh);
     fill: var(--terziaryColor);
     margin: var(--HeaderIconsMargin);
@@ -58,23 +61,3 @@
     border-color: var(--primaryColor);
 
 }
-
-
-/*
-.mobile_section{
-    padding: 3% 15px;
-    margin-bottom: 1rem;
-
-    top:0;
-
-    background-color: var(--contentBackgroundColor);
-    border-color: var(--contentBorderColor);
-    border-style: solid;
-    border-width: var(--borderWitdh);
-    border-radius: var(--mainBorderRadius);
-
-
-    justify-content: center;
-    align-items: center;
-}
- */
