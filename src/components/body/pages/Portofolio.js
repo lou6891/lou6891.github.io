@@ -7,7 +7,6 @@ export default function Portfolio({repositoryData, deviceType}){
 
     const github_ulr = "https://github.com/" + personal_data.GitHub_name
 
-
     if(repositoryData){
         return(
             <div style={{padding : "15px 30px"}}>
