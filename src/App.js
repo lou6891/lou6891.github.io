@@ -19,10 +19,8 @@ function App() {
     // Data from GitHub to load the header elements
     const [userData, setUserData] = React.useState(false)
 
-
     // Bool that will stop the loading for n second for loading animation
     const [isTimePassed, setIsTimePassed] = React.useState(false)
-
 
     // Function that calculate what kind of device the user is using
     const deviceTypeSetterFunction = ()=> {
