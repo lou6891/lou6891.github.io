@@ -81,14 +81,14 @@ export default function Body({deviceType, theme, setTheme}){
                         <li className={classes.header_options}
                             onClick={()=>{setActivePage("About")}}
                             style={{color : activePage === "About" ? "var(--primaryColor)" : "",
-                                padding : deviceType === "Desktop" ? "15px 10px" : "0 10px 15px 10px"}}
+                                padding : deviceType === "Desktop" ? "15px 10px" : "5px 10px 15px 10px"}}
                         >
                             About Me
                         </li>
                         <li className={classes.header_options}
                             onClick={()=>{setActivePage("Portfolio")}}
                             style={{color : activePage === "Portfolio" ? "var(--primaryColor)" : "",
-                                padding : deviceType === "Desktop" ? "15px 10px" : "0 10px 15px 10px"}}
+                                padding : deviceType === "Desktop" ? "15px 10px" : "5px 10px 15px 10px"}}
                         >
                             Portfolio
                         </li>

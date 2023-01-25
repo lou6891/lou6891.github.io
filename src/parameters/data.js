@@ -1,4 +1,9 @@
 
+export const test = {
+    a : "hello world"
+}
+
+
 export const personal_data = {
 
     User_Name_Surname : "Luca Conti",
@@ -103,20 +108,9 @@ export const personal_data = {
         Languages : [
             // Language name  : level from 0 to 5, 0 being never spoken, 5 being native
             ["Italian" , 5, "Native"],
-            ["English" , 4, "FLuent"],
+            ["English" , 4, "Fluent"],
             ["Spanish" , 2, "Limited Working proficiency"],
         ],
-
-        /*
-         Extracurricular_activities : [
-            {
-                activity_name : "",
-                date_start : "September 2022",
-                date_end : "July 2023",
-                activity_information : "",
-            }
-        ]
-         */
 
 
     },
