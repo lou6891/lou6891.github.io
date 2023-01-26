@@ -48,11 +48,13 @@
   --dotExpansion : 225px;
 
   /* app  variables */
-  --mainWrapperMargins : 3% 8% 0 8%;
+  --mainWrapperMargins : 3% 10% 0 10%;
 
   /* Portfolio section variables */
   --portoflioGridLayour : 50% 50%;
   --RepoCardMaxWitdh : 800px;
+  --bodyGgridPadding : 3%;
+
 
   /* About section variables */
   --langugeGridTemplateColumn : 15% 85%;
@@ -67,15 +69,15 @@
   --HeaderIconsMargin : 7%;
 
   /* General Variables */
-  --h1FontSize : 50px;
-  --h2FontSize : 30px;
-  --h3FontSize : 26px;
+  --h1FontSize : 45px;
+  --h2FontSize : 26px;
+  --h3FontSize : 25px;
   --h4FontSize : 24px;
-  --h5FontSize : 22px;
-  --h6FontSize : 20px;
-  --h7FontSize : 18px;
-  --pFontSize : 20px;
-  --buttonFontSize : 19px;
+  --h5FontSize : 23px;
+  --h6FontSize : 22px;
+  --h7FontSize : 20px;
+  --pFontSize : 19px;
+  --buttonFontSize : 20px;
 }
 
 [devicetype = "Tablet"]{
@@ -89,6 +91,7 @@
   /* Portfolio section variables */
   --portoflioGridLayour : 100%;
   --RepoCardMaxWitdh : 800px;
+  --bodyGgridPadding : 3% 0;
 
   /* About section variables */
   --langugeGridTemplateColumn : 17% 83%;
@@ -103,15 +106,15 @@
   --HeaderIconsMargin : 10px;
 
   /* General Variables */
-  --h1FontSize : 45px;
-  --h2FontSize : 28px;
-  --h3FontSize : 26px;
-  --h4FontSize : 24px;
+  --h1FontSize : 40px;
+  --h2FontSize : 25px;
+  --h3FontSize : 24px;
+  --h4FontSize : 23px;
   --h5FontSize : 22px;
-  --h6FontSize : 20px;
-  --h7FontSize : 18px;
-  --pFontSize : 20px;
-  --buttonFontSize : 19px;
+  --h6FontSize : 21px;
+  --h7FontSize : 20px;
+  --pFontSize : 19px;
+  --buttonFontSize : 20px;
 
 }
 
@@ -126,6 +129,7 @@
   /* Portfolio section variables */
   --portoflioGridLayour : 100%;
   --RepoCardMaxWitdh : 800px;
+  --bodyGgridPadding : 3% 0;
 
   /* About section variables */
   --langugeGridTemplateColumn : 30% 70% ;
@@ -141,16 +145,14 @@
 
   /* General Variables */
   --h1FontSize : 35px;
-  --h2FontSize : 24px;
+  --h2FontSize : 23px;
   --h3FontSize : 22px;
-  --h4FontSize : 20px;
-  --h5FontSize : 18px;
-  --h6FontSize : 16px;
-  --h7FontSize : 14px;
-  --pFontSize : 16px;
-  --buttonFontSize : 19px;
-
-
+  --h4FontSize : 21px;
+  --h5FontSize : 20px;
+  --h6FontSize : 19px;
+  --h7FontSize : 18px;
+  --pFontSize : 17px;
+  --buttonFontSize : 18px;
 }
 
 

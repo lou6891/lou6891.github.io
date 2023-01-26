@@ -1,9 +1,4 @@
 
-export const test = {
-    a : "hello world"
-}
-
-
 export const personal_data = {
 
     User_Name_Surname : "Luca Conti",
