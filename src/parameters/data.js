@@ -4,7 +4,7 @@ export const personal_data = {
     User_Name_Surname : "Luca Conti",
     GitHub_name : "lou6891",
     Linkedin_url : "https://www.linkedin.com/in/lucaconti1999/",
-    Website_url : "https://www.deda.app/",
+    Website_url : null,
 
     About_Page : {
         Professional_summary :

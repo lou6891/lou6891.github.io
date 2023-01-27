@@ -61,7 +61,7 @@
   --itSkillsGridTempleteColumn : auto auto auto;
 
   /* Header section variables */
-  --headerImgShadow : 0  0  0 30px var(--innerBackgroundColor);
+  --headerImgShadow : 0  0  2px 30px var(--innerBackgroundColor);
   --headerImgMargin : 20px 0;
 
   /* Icons*/
@@ -98,7 +98,7 @@
   --itSkillsGridTempleteColumn : auto auto auto;
 
   /* Header section variables */
-  --headerImgShadow : 0  0  0 15px var(--innerBackgroundColor);
+  --headerImgShadow : 0  0  2px 15px var(--innerBackgroundColor);
   --headerImgMargin : 20px 15px 20px 20px;
 
   /* Icons*/
@@ -136,7 +136,7 @@
   --itSkillsGridTempleteColumn : auto auto;
 
   /* Header section variables */
-  --headerImgShadow : 0  0  0 15px var(--innerBackgroundColor);
+  --headerImgShadow : 0  0  2px 15px var(--innerBackgroundColor);
   --headerImgMargin : 20px 15px 20px 20px;
 
   /* Icons*/
