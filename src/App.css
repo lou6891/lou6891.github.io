@@ -61,7 +61,7 @@
   --itSkillsGridTempleteColumn : auto auto auto;
 
   /* Header section variables */
-  --headerImgShadow : 0  0  2px 30px var(--innerBackgroundColor);
+  --headerImgShadow : 0  0  2px 25px var(--innerBackgroundColor);
   --headerImgMargin : 20px 0;
 
   /* Icons*/
