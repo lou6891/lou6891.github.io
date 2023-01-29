@@ -2,7 +2,7 @@ import React from 'react';
 import {languageSymbols} from "../../parameters/languageSymbols";
 import classes from "./card.module.css"
 
-export default function Cart_layout({rep, index, deviceType,}) {
+export default function GitRepoCard({rep, index, deviceType,}) {
 
     // https://api.github.com/repos/OWNER/REPO/languages
 
