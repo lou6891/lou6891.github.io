@@ -38,9 +38,60 @@ export default function About({theme}){
                         <hr/>
 
                         <h5 style={{textAlign : "left", margin : "0"}}>
-                            {personal_data["About_Page"]["Professional_summary"]}
+                        {personal_data["About_Page"]["Professional_summary"]
+                            .split('\n')
+                            .map((line, index) => (
+                                <React.Fragment key={index}>
+                                    {line}
+                                    <br />
+                                </React.Fragment>
+                            ))}
                         </h5>
 
+                    </section>
+                : "" }
+
+            {
+                personal_data["About_Page"]["Professional_experiences"]
+                ?
+                    <section id={"Professional_Experience"}>
+                        <h3>
+                            Professional Experience
+                        </h3>
+
+                        <hr/>
+
+                        <VerticalTimeline
+                            lineColor={primaryColor}
+                        >
+                        {
+                            personal_data["About_Page"]["Professional_experiences"].map((ProfExp, index)=>{
+                                return(
+                                <VerticalTimelineElement
+                                    key={index}
+                                    className="vertical-timeline-element"
+                                    contentArrowStyle={{ borderRight: '8px solid  var(--innerBackgroundColor)' }}
+                                    contentStyle={{ background: "var(--innerBackgroundColor)", color: '#fff' }}
+                                    iconStyle={{ background : "var(--secondaryColor)"}}
+                                    dateClassName={classes.date}
+                                    date={ProfExp["date_start"] +" - "+ ProfExp["date_end"]}
+                                >
+                                    <h4>{ProfExp["company_name"]}</h4>
+                                    <h6>{ProfExp["position_name"]}</h6>
+                                    <ul>
+                                        {ProfExp["position_information"].map((value, index)=>{
+                                            return(
+                                                <li key={index}>
+                                                    {value}
+                                                </li>
+                                            )
+                                        })}
+                                    </ul>
+                                </VerticalTimelineElement>
+                                )
+                            })
+                        }
+                    </VerticalTimeline>
                     </section>
                 : "" }
 
@@ -98,49 +149,6 @@ export default function About({theme}){
                     </section>
                 : "" }
 
-            {
-                personal_data["About_Page"]["Professional_experiences"]
-                ?
-                    <section id={"Professional_Experience"}>
-                        <h3>
-                            Professional Experience
-                        </h3>
-
-                        <hr/>
-
-                        <VerticalTimeline
-                            lineColor={primaryColor}
-                        >
-                        {
-                            personal_data["About_Page"]["Professional_experiences"].map((ProfExp, index)=>{
-                                return(
-                                <VerticalTimelineElement
-                                    key={index}
-                                    className="vertical-timeline-element"
-                                    contentArrowStyle={{ borderRight: '8px solid  var(--innerBackgroundColor)' }}
-                                    contentStyle={{ background: "var(--innerBackgroundColor)", color: '#fff' }}
-                                    iconStyle={{ background : "var(--secondaryColor)"}}
-                                    dateClassName={classes.date}
-                                    date={ProfExp["date_start"] +" - "+ ProfExp["date_end"]}
-                                >
-                                    <h4>{ProfExp["company_name"]}</h4>
-                                    <h6>{ProfExp["position_name"]}</h6>
-                                    <ul>
-                                        {ProfExp["position_information"].map((value, index)=>{
-                                            return(
-                                                <li key={index}>
-                                                    {value}
-                                                </li>
-                                            )
-                                        })}
-                                    </ul>
-                                </VerticalTimelineElement>
-                                )
-                            })
-                        }
-                    </VerticalTimeline>
-                    </section>
-                : "" }
 
             {
                 personal_data["About_Page"]["IT_skills"]
