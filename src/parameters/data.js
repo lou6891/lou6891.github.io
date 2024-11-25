@@ -18,7 +18,7 @@ export const personal_data = {
             "\n" +
             "My career began with a focus on quality control, project management, and business development. After working in monitoring and " +
             "control, I decided to transition to a more technical role. This led me to become a MLOps Engineer at EcoVadis, where I developed " +
-            "key automation tools and implemented advanced AI solutions. " +
+            "key automation tools and implemented advanced AI solutions. \n" +
             "\n" +
             "I pride myself on my problem-solving skills, my ability to lead cross-cultural teams, and my relentless pursuit of excellence. I " +
             "am always eager to connect with like-minded professionals, explore new technologies, and engage in meaningful discussions that " +
