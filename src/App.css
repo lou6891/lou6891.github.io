@@ -1,4 +1,3 @@
-
 :root{
   --headerWitdh : 26%;
 
@@ -12,6 +11,23 @@
 
   --bodyHeaderLenght : 54%;
 
+  --h3Margin: 5px 0 0 0;
+
+  --timelineDotSize : 25px;
+
+  --timelineDotMarginLeft : calc(60px - var(--timelineDotSize) / 2);
+
+
+   /* General Variables */
+   --h1FontSize: 35px;
+   --h2FontSize: 23px;
+   --h3FontSize: 21px;
+   --h3Margin: 5px 0 0 0;
+   --h4FontSize: 21px;
+   --h5FontSize: 15px;
+   --h6FontSize: 19px;
+   --h7FontSize: 18px;
+   --pFontSize : 13px;
 }
 [theme = "dark"]{
   --appBackgroundColor: #2B2A2C;
@@ -92,15 +108,20 @@
   --HeaderIconsMargin : 7%;
 
   /* General Variables */
-  --h1FontSize : 45px;
-  --h2FontSize : 26px;
-  --h3FontSize : 25px;
-  --h4FontSize : 24px;
-  --h5FontSize : 23px;
-  --h6FontSize : 22px;
-  --h7FontSize : 20px;
-  --pFontSize : 19px;
-  --buttonFontSize : 20px;
+  --h1FontSizeDesktop : 45px;
+  --h2FontSizeDesktop : 26px;
+  --h3FontSizeDesktop : 21px;
+  --h3Margin: 5px 0 0 0;
+  --h4FontSizeDesktop : 21px;
+  --h5FontSizeDesktop : 19px;
+  --h6FontSizeDesktop : 17px;
+  --h7FontSizeDesktop : 20px;
+  --pFontSizeDesktop : 15px;
+  --buttonFontSizeDesktop : 20px;
+
+  --timelineDotSize : 45px;
+  --timelineDotMarginLeft : calc(60px - var(--timelineDotSize) / 2);
+
 }
 
 [devicetype = "Tablet"]{
@@ -128,14 +149,29 @@
   --maxLogosWitdh : 40px;
   --HeaderIconsMargin : 10px;
 
-  /* General Variables */
-  --h1FontSize : 40px;
-  --h2FontSize : 25px;
-  --h3FontSize : 24px;
-  --h4FontSize : 23px;
-  --h5FontSize : 22px;
-  --h6FontSize : 21px;
-  --h7FontSize : 20px;
+  --h1FontSize : 45px;
+  --h2FontSize : 26px;
+  --h3FontSize : 21px;
+  --h3Margin: 5px 0 0 0;
+  --h4FontSize : 21px;
+  --h5FontSize : 19px;
+  --h6FontSize : 17px;
+  --  : 20px;
+  --pFontSize : 15px;
+  --buttonFontSize : 20px;
+
+  
+  --h1FontSizeDesktop : 45px;
+  --h2FontSizeDesktop : 26px;
+  --h3FontSizeDesktop : 21px;
+  --h3Margin: 5px 0 0 0;
+  --h4FontSizeDesktop : 21px;
+  --h5FontSizeDesktop : 19px;
+  --h6FontSizeDesktop : 17px;
+  --h7FontSizeDesktop : 20px;
+  --pFontSizeDesktop : 15px;
+  --buttonFontSizeDesktop : 20px;
+  
   --pFontSize : 19px;
   --buttonFontSize : 20px;
 
@@ -147,7 +183,7 @@
   --dotExpansion : 100px;
 
   /* app  variables */
-  --mainWrapperMargins : 4% 5%;
+  --mainWrapperMargins : 0% 0%;
 
   /* Portfolio section variables */
   --portoflioGridLayour : 100%;
@@ -160,22 +196,35 @@
 
   /* Header section variables */
   --headerImgShadow : 0  0  1px 1px var(--secondaryColor);
-  --headerImgMargin : 20px 15px 20px 20px;
+  --headerImgMargin : 5px 0px 7px 1px;
 
   /* Icons*/
   --maxLogosWitdh : 30px;
   --HeaderIconsMargin : 5px;
 
   /* General Variables */
-  --h1FontSize : 35px;
-  --h2FontSize : 23px;
-  --h3FontSize : 22px;
-  --h4FontSize : 21px;
-  --h5FontSize : 20px;
-  --h6FontSize : 19px;
-  --h7FontSize : 18px;
-  --pFontSize : 17px;
-  --buttonFontSize : 18px;
+  --h1FontSize: 35px;
+  --h2FontSize: 23px;
+  --h3FontSize: 21px;
+  --h3Margin: 5px 0 0 0;
+  --h4FontSize: 21px;
+  --h5FontSize: 15px;
+  --h6FontSize: 19px;
+  --h7FontSize: 18px;
+  --pFontSize : 13px;
+
+
+  --h1FontSizeMobile: 35px;
+  --h2FontSizeMobile : 23px;
+  --h1FontSizeMobile : 21px;
+  --h3Margin: 5px 0 0 0;
+  --h4FontSizeMobile : 21px;
+  --h5FontSizeMobile : 15px;
+  --h6FontSizeMobile : 19px;
+  --h7FontSizeMobile : 18px;
+
+  --pFontSizeMobile : 13px;
+  --buttonFontSizeMobile : 18px;
 }
 
 
@@ -208,53 +257,59 @@
 }
 
 h1{
-  font-size: var(--h1FontSize);
+  font-size: clamp(var(--h1FontSizeMobile), 4vw, var(--h1FontSizeDesktop));
   color : var(--primaryColor);
   cursor: default;
 }
 
 h2{
-  font-size: var(--h2FontSize);
+  font-size: clamp(var(--h2FontSizeMobile), 3vw, var(--h2FontSizeDesktop));
   color: var(--secondaryColor);
   cursor: default;
 }
 
 h3{
-  font-size: var(--h3FontSize);
+  font-size: clamp(var(--h3FontSizeMobile), 2.5vw, var(--h3FontSizeDesktop));
   color: var(--secondaryColor);
   cursor: default;
 }
 
 h4{
-  font-size: var(--h4FontSize);
+  font-size: clamp(var(--h4FontSizeMobile), 2.5vw, var(--h4FontSizeDesktop));
   color: var(--secondaryColor);
   font-weight: normal;
   cursor: default;
 }
 
 h5{
-  font-size: var(--h5FontSize);
+  font-size: clamp(var(--h5FontSizeMobile), 2vw, var(--h5FontSizeDesktop));
   color: var(--secondaryColor);
   font-weight: normal;
   cursor: default;
 }
 
 h6{
-  font-size: var(--h6FontSize);
+  font-size: clamp(var(--h6FontSizeMobile), 2vw, var(--h6FontSizeDesktop));
   color: var(--secondaryColor);
   font-weight: normal;
   cursor: default;
 }
-
+/* 
+h7{
+  font-size: clamp(var(--h7FontSizeMobile), 2vw, var(--h7FontSizeDesktop));
+  color: var(--secondaryColor);
+  font-weight: normal;
+  cursor: default;
+} */
 
 p{
-  font-size: var(--pFontSize);
+  font-size: clamp(var(--pFontSizeMobile), 2vw, var(--pFontSizeDesktop)); 
   color: var(--secondaryColor);
   cursor: default;
 }
 
 button{
-  font-size: var(--buttonFontSize);
+  font-size: clamp(var(--buttonFontSizeMobile), 2.5vw, var(--buttonFontSizeDesktop));
 }
 
 
