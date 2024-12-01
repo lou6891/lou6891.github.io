@@ -106,10 +106,6 @@ export default function About({theme}){
                                     subtitle__field_name={subtitle__field_name}
                                     list_field_name={list_field_name}
                                 />)
-
-                                // return(VerticalTimelineHeaderModified({index, ProfExp, title_field_name, subtitle__field_name, list_field_name}))
-                                // return(VerticalTimelineHeaderModified({index, ProfExp, "company_name", "position_name", "position_information"}))
-
                             })
                         }
                     </VerticalTimeline>
