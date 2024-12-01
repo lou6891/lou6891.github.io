@@ -77,8 +77,8 @@ export default function Header({userData,deviceType}){
                 >
 
                             <img src={userData["avatar_url"]}
-                                 alt={"GitHub profile"}
-                                 style={{maxWidth :deviceType === "Desktop" ? "90%" : "30%" }}
+                                 alt={"Profile Picture"}
+                                 style={{maxWidth: deviceType === "Desktop" ? "90%" : "50%"}}
                                  className={classes.header_profile_img }
                             />
 
@@ -128,7 +128,7 @@ export default function Header({userData,deviceType}){
                     ?
                         <div>
                             <hr/>
-                            <h5>
+                            <h5 style={{marginTop : "10px", marginBottom : "10px", color : "white"}}>
                                 {userData["bio"]}
                             </h5>
                             <hr/>
