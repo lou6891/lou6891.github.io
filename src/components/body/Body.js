@@ -11,7 +11,7 @@ import { settings } from "../../parameters/settings";
 export default function Body({ deviceType, theme, setTheme }) {
     const headerStyles = () => {
         if (deviceType === "Desktop") { return { height: "max-content", marginBottom: "80px" } }
-        else { return { height: "10px" } }
+        else { return { height: "0" } }
     }
 
     const [activePage, setActivePage] = React.useState(settings.LandingPage);

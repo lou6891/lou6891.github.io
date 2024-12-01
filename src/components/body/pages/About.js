@@ -5,6 +5,7 @@ import {languageSymbols} from "../../../parameters/languageSymbols";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
+
 const iconSize = "100px"
 
 // https://stephane-monnot.github.io/react-vertical-timeline/#/
@@ -29,12 +30,12 @@ export default function About({theme}){
                 key={index}
                 className="vertical-timeline-element"
                 contentArrowStyle={{ borderRight: '8px solid  var(--innerBackgroundColor)' , top : "25px"}}
-                contentStyle={{ background: "transparent", top : "-17px", boxShadow : "0 0px 0 #9e2222" , marginLeft : "52px", width : "90%"} }
-                iconStyle={{ background : "var(--secondaryColor)", width : "var(--timelineDotSize)" , height : "var(--timelineDotSize)", marginLeft : "7px"}}
+                contentStyle={{ background: "var(--contentBackgroundColor)",  top : "-17px", boxShadow : "2px 2px 2px 2px var(--innerBackgroundColor)" , marginLeft : "52px", width : "var(--verticalTimelineContentWidth)", padding : "10px 10px 10px 16px"} }
+                iconStyle={{ background : "var(--secondaryColor)", width : "var(--timelineDotSize)" , height : "var(--timelineDotSize)", marginLeft : "var(--timelineDotMarginLeft)"}}
+                style={{marginBottom : "7%", marginTop : "7%"}}
                 dateClassName={classes.date}
                 date={ProfExp["date_start"] +" - "+ ProfExp["date_end"]}
             >
-                console.log(ProfExp[title_field_name],ProfExp[title_field_name],ProfExp[title_field_name],ProfExp[title_field_name],)
                 <h4>{ProfExp[title_field_name]}</h4>
                 <h6>{ProfExp[subtitle__field_name]}</h6>
                 <ul className={classes.about_main}>
@@ -49,6 +50,7 @@ export default function About({theme}){
             </VerticalTimelineElement>
         )
     }
+
 
 
     return (
@@ -69,7 +71,7 @@ export default function About({theme}){
                             .split('\n')
                             .map((line, index) => (
                                 <React.Fragment key={index}>
-                                    <p key={index} style={{ marginBottom: "7px", lineHeight: "1.3" }}>
+                                    <p key={index} style={{ marginBottom: "7px", lineHeight: "1.3", fontSize: "clamp(calc(var(--pFontSizeMobile) + 1px) ,  2vw,calc(var(--pFontSizeDesktop) + 2px))" }}>
                                     {line}
                                     </p>
                                 </React.Fragment>
@@ -92,6 +94,7 @@ export default function About({theme}){
                         <VerticalTimeline
                             lineColor={primaryColor}
                             className={classes.vertical_timeline}
+                            layout={"1-column"}
                         >
                         {
                             personal_data["About_Page"]["Professional_experiences"].map((ProfExp, index)=>{
@@ -124,6 +127,8 @@ export default function About({theme}){
 
                         <VerticalTimeline
                             lineColor={primaryColor}
+                            className={classes.vertical_timeline}
+                            layout={"1-column"}
                         >
                             {
                                 personal_data["About_Page"]["Education"].map((eduExp, index)=>{
