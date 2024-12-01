@@ -13,7 +13,6 @@
 
     top:0;
 
-    background-color: var(--contentBackgroundColor);
     border-color: var(--contentBorderColor);
     border-style: solid;
     border-width: var(--borderWitdh);
@@ -67,7 +66,11 @@
 
 }
 
-.header hr{
-    background-color: var(--secondaryColor);
-    color:  var(--secondaryColor);
+.credits{
+    opacity: 55%;
+    text-decoration: none;
+    color: var(--terziaryColor);
+    cursor: pointer;
+    font-size: calc(var(--pFontSize) - 3px);
 }
+
