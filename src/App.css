@@ -1,5 +1,5 @@
 :root{
-  --headerWitdh : 26%;
+  --headerWitdh : 30%;
 
   --mainBorderRadius : 15px;
   --secondaryBorderRadius : 10px;
@@ -15,24 +15,45 @@
 
   --timelineDotSize : 25px;
 
-  --timelineDotMarginLeft : calc(60px - var(--timelineDotSize) / 2);
+  --timelineDotMarginLeft : 7px;
 
 
    /* General Variables */
-   --h1FontSize: 35px;
-   --h2FontSize: 23px;
-   --h3FontSize: 21px;
-   --h3Margin: 5px 0 0 0;
-   --h4FontSize: 21px;
-   --h5FontSize: 15px;
-   --h6FontSize: 19px;
-   --h7FontSize: 18px;
-   --pFontSize : 13px;
+    --h1FontSize: 35px;
+    --h2FontSize: 23px;
+    --h3FontSize: 21px;
+    --h4FontSize: 21px;
+    --h5FontSize: 15px;
+    --h6FontSize: 19px;
+    --h7FontSize: 18px;
+    --pFontSize : 13px;
+
+
+    --h1FontSizeMobile : 45px;
+    --h2FontSizeMobile: 20px;
+    --h3FontSizeMobile: 18px;
+    --h4FontSizeMobile : 17px;
+    --h5FontSizeMobile : 15px;
+    --h6FontSizeMobile : 13px;
+    --h7FontSizeMobile : 16px;
+    --pFontSizeMobile : 13px;
+    --buttonFontSizeMobile : 18px;
+
+    --h1FontSizeDesktop : 100px;
+    --h2FontSizeDesktop : 26px;
+    --h3FontSizeDesktop : 21px;
+    --h4FontSizeDesktop : 21px;
+    --h5FontSizeDesktop : 19px;
+    --h6FontSizeDesktop : 17px;
+    --h7FontSizeDesktop : 20px;
+    --pFontSizeDesktop : 17px;
+    --buttonFontSizeDesktop : 20px;
+ 
 }
 [theme = "dark"]{
   --appBackgroundColor: #2B2A2C;
-  --contentBackgroundColor: #3B3B3E;
-  --innerBackgroundColor: #504f54;
+  --contentBackgroundColor: rgb(59, 59, 62,  0.5);
+  --innerBackgroundColor: rgb(80, 79, 84, 0.5);
   --otherBackgroundColor: #504f54;
 
   --contentBorderColor : transparent;
@@ -87,7 +108,11 @@
   --dotExpansion : 225px;
 
   /* app  variables */
-  --mainWrapperMargins : 3% 10% 0 10%;
+  --mainWrapperMargins : 2% 3%;
+
+  /* header variables */
+  --headerTitleMargins : 0 0 0 0;
+  --headerSocialIconsMargins:  0 0 0 0;  
 
   /* Portfolio section variables */
   --portoflioGridLayour : 50% 50%;
@@ -99,6 +124,8 @@
   --langugeGridTemplateColumn : 15% 85%;
   --itSkillsGridTempleteColumn : auto auto auto;
 
+  --verticalTimelineContentWidth : 97%;
+
   /* Header section variables */
   --headerImgShadow : 0  0  1px 1px var(--secondaryColor);
   --headerImgMargin : 20px 0;
@@ -107,20 +134,13 @@
   --maxLogosWitdh : 35px;
   --HeaderIconsMargin : 7%;
 
-  /* General Variables */
-  --h1FontSizeDesktop : 45px;
-  --h2FontSizeDesktop : 26px;
-  --h3FontSizeDesktop : 21px;
-  --h3Margin: 5px 0 0 0;
-  --h4FontSizeDesktop : 21px;
-  --h5FontSizeDesktop : 19px;
-  --h6FontSizeDesktop : 17px;
-  --h7FontSizeDesktop : 20px;
-  --pFontSizeDesktop : 15px;
-  --buttonFontSizeDesktop : 20px;
 
-  --timelineDotSize : 45px;
-  --timelineDotMarginLeft : calc(60px - var(--timelineDotSize) / 2);
+  --timelineDotSize : 35px;
+  --timelineDotMarginLeft : 2px;
+
+  /* Margins */
+  --h3Margin: 10px 0 0 0;
+
 
 }
 
@@ -130,7 +150,11 @@
   --dotExpansion : 100px;
 
   /* app  variables */
-  --mainWrapperMargins : 5% 7%;
+  --mainWrapperMargins : 1% 2%;
+
+  /* header variables */
+  --headerTitleMargins : 0 0 0 0;
+  --headerSocialIconsMargins:  0 0 0 0;  
 
   /* Portfolio section variables */
   --portoflioGridLayour : 100%;
@@ -140,6 +164,8 @@
   /* About section variables */
   --langugeGridTemplateColumn : 17% 83%;
   --itSkillsGridTempleteColumn : auto auto auto;
+
+  --verticalTimelineContentWidth : 97%;
 
   /* Header section variables */
   --headerImgShadow : 0  0  1px 1px var(--secondaryColor);
@@ -152,28 +178,17 @@
   --h1FontSize : 45px;
   --h2FontSize : 26px;
   --h3FontSize : 21px;
-  --h3Margin: 5px 0 0 0;
   --h4FontSize : 21px;
   --h5FontSize : 19px;
   --h6FontSize : 17px;
-  --  : 20px;
   --pFontSize : 15px;
   --buttonFontSize : 20px;
-
-  
-  --h1FontSizeDesktop : 45px;
-  --h2FontSizeDesktop : 26px;
-  --h3FontSizeDesktop : 21px;
-  --h3Margin: 5px 0 0 0;
-  --h4FontSizeDesktop : 21px;
-  --h5FontSizeDesktop : 19px;
-  --h6FontSizeDesktop : 17px;
-  --h7FontSizeDesktop : 20px;
-  --pFontSizeDesktop : 15px;
-  --buttonFontSizeDesktop : 20px;
   
   --pFontSize : 19px;
   --buttonFontSize : 20px;
+
+    /* Margins */
+    --h3Margin: 5px 0 0 0;
 
 }
 
@@ -185,6 +200,10 @@
   /* app  variables */
   --mainWrapperMargins : 0% 0%;
 
+  /* header variables */
+  --headerTitleMargins :  0 5px  0 5px;
+  --headerSocialIconsMargins:  0 0 0px 0px;
+
   /* Portfolio section variables */
   --portoflioGridLayour : 100%;
   --RepoCardMaxWitdh : 800px;
@@ -194,6 +213,8 @@
   --langugeGridTemplateColumn : 30% 70% ;
   --itSkillsGridTempleteColumn : auto auto;
 
+  --verticalTimelineContentWidth : 86%;
+
   /* Header section variables */
   --headerImgShadow : 0  0  1px 1px var(--secondaryColor);
   --headerImgMargin : 5px 0px 7px 1px;
@@ -202,29 +223,8 @@
   --maxLogosWitdh : 30px;
   --HeaderIconsMargin : 5px;
 
-  /* General Variables */
-  --h1FontSize: 35px;
-  --h2FontSize: 23px;
-  --h3FontSize: 21px;
-  --h3Margin: 5px 0 0 0;
-  --h4FontSize: 21px;
-  --h5FontSize: 15px;
-  --h6FontSize: 19px;
-  --h7FontSize: 18px;
-  --pFontSize : 13px;
-
-
-  --h1FontSizeMobile: 35px;
-  --h2FontSizeMobile : 23px;
-  --h1FontSizeMobile : 21px;
-  --h3Margin: 5px 0 0 0;
-  --h4FontSizeMobile : 21px;
-  --h5FontSizeMobile : 15px;
-  --h6FontSizeMobile : 19px;
-  --h7FontSizeMobile : 18px;
-
-  --pFontSizeMobile : 13px;
-  --buttonFontSizeMobile : 18px;
+    /* Margins */
+    --h3Margin: 10px 0 0 1px;
 }
 
 
@@ -257,19 +257,23 @@
 }
 
 h1{
-  font-size: clamp(var(--h1FontSizeMobile), 4vw, var(--h1FontSizeDesktop));
+  font-size: clamp(var(--h1FontSizeMobile), 10vw, var(--h1FontSizeDesktop));
   color : var(--primaryColor);
   cursor: default;
 }
 
 h2{
   font-size: clamp(var(--h2FontSizeMobile), 3vw, var(--h2FontSizeDesktop));
+  font-style: italic;
+
   color: var(--secondaryColor);
   cursor: default;
 }
 
 h3{
   font-size: clamp(var(--h3FontSizeMobile), 2.5vw, var(--h3FontSizeDesktop));
+  font-style: italic;
+
   color: var(--secondaryColor);
   cursor: default;
 }
@@ -308,8 +312,14 @@ p{
   cursor: default;
 }
 
+li{
+  font-size: clamp(calc(var(--pFontSizeMobile) + 2px) ,  2vw,calc(var(--pFontSizeDesktop) + 2px)); 
+  color: var(--secondaryColor);
+  cursor: default;
+}
+
 button{
-  font-size: clamp(var(--buttonFontSizeMobile), 2.5vw, var(--buttonFontSizeDesktop));
+  font-size: clamp(var(--buttonFontSizeMobile), 2vw, var(--buttonFontSizeDesktop));
 }
 
 

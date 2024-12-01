@@ -37,14 +37,43 @@
 
 
 .header_title_desktop{
+    margin: var(--headerTitleMargins);
+    padding: 0;
+    font-family: "Mrs Saint Delafield", cursive;
+    letter-spacing: 4px; 
+    line-height: 1.2; 
+    font-weight: 800;
 }
 
-.header_title_mobile{
+/* .header_title_mobile{
     text-align: center;
     align-items: center;
     width: 100%;
     justify-self: center;
+    margin-top: 0px;
+    font
+} */
+
+
+
+
+.header_title_mobile {
+    margin: var(--headerTitleMargins);
+    padding: 0;
+    white-space: pre-line; 
+    word-break: break-word; 
+    font-family: "Mrs Saint Delafield", cursive;
+    letter-spacing: 4px; 
+    line-height: 1.2; 
+    font-weight: 800;
 }
+
+.header_title_social_icons{
+    margin: var(--headerSocialIconsMargins);
+    display : flex; 
+}
+
+
 
 .header svg{
     width: 100%;
