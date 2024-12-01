@@ -3,7 +3,6 @@
 .body{
     width: 100%;
     color: var(--contentBorderColor);
-    background-color: var(--contentBackgroundColor);
     border-color: var(--contentBorderColor);
     border-width: var(--borderWitdh);
     border-style: solid;
@@ -127,8 +126,12 @@
     padding: 0 3%;
 }
 
+.about_main br{
+    size : 0;
+}
+
 .about_main h3{
-    margin: 20px 0 0 0 ;
+    margin: var(--h3Margin);
     text-align: left;
     width: max-content;
     color: var(--primaryColor);
@@ -151,14 +154,16 @@
 }
 
 .about_main ul{
-    margin: 10px 0;
+    margin: 0 0 0 10px ;
+    padding: 3px 0 0 0;
 }
 
 .about_main li{
     list-style: circle;
     color: var(--secondaryColor);
     text-align: left;
-    font-size: var(--h6FontSize);
+    font-size: 16px;
+    padding-right: 0%;
 }
 
 .about_main hr{
@@ -167,14 +172,14 @@
     border-radius: var(--secondaryBorderRadius);
     background-color: var(--secondaryColor);
     height: 2px;
-    margin: 10px 0 40px 0;
+    margin: 5px 0 10px 0;
     justify-self: left;
     width: var(--bodyHeaderLenght);
 }
 
 .about_main_dates{
     margin: 3px 0 ;
-    font-size: var(--h7FontSize);
+    font-size: clamp(var(--h7FontSizeMobile), 4vw, var(--h7FontSizeDesktop));
     color: var(--terziaryColor);
     text-align: left;
 }
@@ -256,4 +261,8 @@ abbr[data-title]:focus::after {
     height: 10px;
     margin: 0;
     border: none;
+}
+
+.vertical_timeline{
+    left: -5px;
 }
