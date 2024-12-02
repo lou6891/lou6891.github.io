@@ -74,7 +74,7 @@ export default function Header({userData,deviceType}){
             >
 
                 <div
-                    style={{ display : deviceType === "Desktop" ? "" : "flex"}}
+                    // style={{ display : deviceType === "Desktop" ? "" : "flex"}}
                 >
 
                     <img src={userData["avatar_url"]}

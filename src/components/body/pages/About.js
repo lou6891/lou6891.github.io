@@ -29,9 +29,17 @@ export default function About({theme}){
             <VerticalTimelineElement
                 key={index}
                 className="vertical-timeline-element"
-                contentArrowStyle={{ borderRight: '8px solid  var(--innerBackgroundColor)' , top : "25px"}}
-                contentStyle={{ background: "var(--contentBackgroundColor)",  top : "-17px", boxShadow : "2px 2px 2px 2px var(--innerBackgroundColor)" , marginLeft : "52px", width : "var(--verticalTimelineContentWidth)", padding : "10px 10px 10px 16px"} }
-                iconStyle={{ background : "var(--secondaryColor)", width : "var(--timelineDotSize)" , height : "var(--timelineDotSize)", marginLeft : "var(--timelineDotMarginLeft)"}}
+                contentArrowStyle={{ borderRight: '8px solid  var(--innerBackgroundColor)' , top : "var(--verticalTimelineArrowTop)"}}
+                contentStyle={{ background: "var(--contentBackgroundColor)",  top : "-17px", boxShadow : "2px 2px 2px 2px var(--innerBackgroundColor)" , marginLeft : "var(--verticalTimelineContentMarginLeft)", width : "var(--verticalTimelineContentWidth)", padding : "10px 10px 10px 16px"} }
+
+                iconStyle={{ background : "var(--secondaryColor)", 
+                    width : "var(--timelineDotSize)" , 
+                    height : "var(--timelineDotSize)", 
+                    marginLeft : "var(--timelineDotMarginLeft)", 
+                    boxShadow :"var(--dotBoxShadowColor) 0px 0px 0px 4px, rgba(0, 0, 0, 0.08) 0px 2px 0px 0px inset, rgba(0, 0, 0, 0.05) 0px 3px 0px 4px"
+                    // rgb(255, 255, 255) 0px 0px 0px 4px, rgba(0, 0, 0, 0.08) 0px 2px 0px 0px inset, rgba(0, 0, 0, 0.05) 0px 3px 0px 4px
+                    // 0 0 0 4px #fff, inset 0 2px 0 rgba(0, 0, 0, .08), 0 3px 0 4px rgba(0, 0, 0, .05)
+                }}
                 style={{marginBottom : "7%", marginTop : "7%"}}
                 dateClassName={classes.date}
                 date={ProfExp["date_start"] +" - "+ ProfExp["date_end"]}

@@ -41,7 +41,9 @@
     border-color: var(--primaryColor);
 }
 
-.body_header_container_mobile{
+
+
+.body_header_container{
     position: fixed;
     bottom: 0;
     left: 0;
@@ -50,38 +52,25 @@
     z-index: 10;
     min-height: 65px;
 
-    display: flex;
-    justify-content: center;
 
-    border-radius: var(--mainBorderRadius) var(--mainBorderRadius) 0 0   ;
-    border-color: var(--contentBorderColor);
-    border-width: var(--borderWitdh);
-
-    background-color: var(--otherBackgroundColor);
-    opacity: 95%;
-}
-
-.body_header_container_desktop{
-    display: flex;
-    padding: 10px 20px;
-
-    width: var(--bodyHeaderLenght);
-    float: right;
+    /* width: var(--bodyHeaderLenght); */
+    /* float: right; */
     min-height: content-box;
-    border-radius: 0 var(--mainBorderRadius);
-    border-color: var(--contentBorderColor);
-    border-width: 0 0 var(--borderWitdh) var(--borderWitdh);
+    /* border : 0 0 var(--borderWitdh) var(--borderWitdh) solid var(--headerBorderColor); */
+    border-radius: var(--mainBorderRadius);
+    border-color: var(--headerBorderColor);
+    border-width: var(--borderWidth) 0 0 0;
     border-style: solid;
 
-    background-color: var(--otherBackgroundColor);
+    background-color: var(--appBackgroundColor);
     align-items: center;
 
     margin : 0;
 }
 
-.body header ul {
+.body_header_ul{
 
-    width: 100%;
+    /* width: 100%; */
     min-height: content-box;
     align-items: center;
     justify-content: space-evenly;
@@ -89,8 +78,9 @@
     display: flex;
     list-style: none;
     margin : 0;
-
+    padding:0;
 }
+
 
 .header_options{
     color: var(--secondaryColor);
@@ -154,7 +144,7 @@
 }
 
 .about_main ul{
-    margin: 0 0 0 10px ;
+    margin: 0 0 0 20px ;
     padding: 3px 0 0 0;
 }
 
@@ -181,14 +171,15 @@
 
 .about_main_dates{
     margin: 3px 0 ;
-    font-size: clamp(var(--h7FontSizeMobile), 4vw, var(--h7FontSizeDesktop));
+    font-size: clamp(var(--h6FontSizeMobile), 4vw, var(--h6FontSizeDesktop));
     color: var(--terziaryColor);
     text-align: left;
 }
 
 .date{
     text-align: left;
-    color: var(--primaryColor);
+    color: var(--secondaryColor);
+    font-size: clamp(var(--h6FontSizeMobile), 2.5vw, var(--h6FontSizeDesktop));
 }
 
 
@@ -234,9 +225,9 @@ abbr[data-title]:focus::after {
 .language_skills_grid{
     display: grid;
     grid-template-columns: var(--langugeGridTemplateColumn);
-    background-color: var(--innerBackgroundColor);
+    background-color: var(--contentBackgroundColor);
     border-radius: var(--secondaryBorderRadius);
-    border-color: var(--innerBackgroundColor);
+    border-color: var(--contentBorderColor);
     border-style: solid;
     border-width: 10px 15px;
 }

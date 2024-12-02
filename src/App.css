@@ -1,15 +1,15 @@
 :root{
   --headerWitdh : 30%;
 
-  --mainBorderRadius : 15px;
+  --mainBorderRadius : 5px;
   --secondaryBorderRadius : 10px;
 
-  --borderWitdh : 1px;
+  --borderWidth : 3px;
 
   --maxLogosWitdh : 55px;
   --maxLanguageImageWidth : 35px;
 
-  --bodyHeaderLenght : 54%;
+  --bodyHeaderLenght : 100%;
 
   --h3Margin: 5px 0 0 0;
 
@@ -39,7 +39,7 @@
     --pFontSizeMobile : 13px;
     --buttonFontSizeMobile : 18px;
 
-    --h1FontSizeDesktop : 100px;
+    --h1FontSizeDesktop : 90px;
     --h2FontSizeDesktop : 26px;
     --h3FontSizeDesktop : 21px;
     --h4FontSizeDesktop : 21px;
@@ -57,11 +57,14 @@
   --otherBackgroundColor: #504f54;
 
   --contentBorderColor : transparent;
+  --headerBorderColor : rgb(80, 79, 84, 0.5);
+  
 
-  --primaryColor : #fdd66d;
-  --secondaryColor : #dcdcdc;
+  --primaryColor : #658864;
+  --secondaryColor : #e0dede;
   --terziaryColor : #d5d5d5;
 
+  --dotBoxShadowColor :  rgb(220, 220, 220);
   /*
   Colors used in the template
   --appBackgroundColor : #111111;
@@ -77,17 +80,24 @@
 }
 
 [theme = "light"]{
-
-  --appBackgroundColor: #eeeeee;
+  /* --appBackgroundColor: #eeeeee; 
   --contentBackgroundColor: #d6d6d6;
+  --innerBackgroundColor: #b8b8b8;
+  --otherBackgroundColor: #b8b8b8;*/
+  --appBackgroundColor: #d4d4d4; 
+  --contentBackgroundColor: rgb(184, 184, 184, 0.3);
   --innerBackgroundColor: #b8b8b8;
   --otherBackgroundColor: #b8b8b8;
 
   --contentBorderColor : transparent;
+  --headerBorderColor : rgb(80, 79, 84, 0.5);
+
 
   --primaryColor : #658864;
   --secondaryColor : #484848;
   --terziaryColor : #7b7b7b;
+
+  --dotBoxShadowColor :   rgb(184, 184, 184);
 
   /*
   Colors used in the template
@@ -108,7 +118,7 @@
   --dotExpansion : 225px;
 
   /* app  variables */
-  --mainWrapperMargins : 2% 3%;
+  --mainWrapperMargins : 2% 7% 2% 3%;
 
   /* header variables */
   --headerTitleMargins : 0 0 0 0;
@@ -125,15 +135,16 @@
   --itSkillsGridTempleteColumn : auto auto auto;
 
   --verticalTimelineContentWidth : 97%;
+  --verticalTimelineArrowTop : 28px;
+  --verticalTimelineContentMarginLeft : 57px;
 
   /* Header section variables */
   --headerImgShadow : 0  0  1px 1px var(--secondaryColor);
-  --headerImgMargin : 20px 0;
+  --headerImgMargin : 30px 0;
 
   /* Icons*/
   --maxLogosWitdh : 35px;
   --HeaderIconsMargin : 7%;
-
 
   --timelineDotSize : 35px;
   --timelineDotMarginLeft : 2px;
@@ -166,6 +177,8 @@
   --itSkillsGridTempleteColumn : auto auto auto;
 
   --verticalTimelineContentWidth : 97%;
+  --verticalTimelineArrowTop : 25px;
+  --verticalTimelineContentMarginLeft : 52px;
 
   /* Header section variables */
   --headerImgShadow : 0  0  1px 1px var(--secondaryColor);
@@ -214,6 +227,9 @@
   --itSkillsGridTempleteColumn : auto auto;
 
   --verticalTimelineContentWidth : 86%;
+  --verticalTimelineArrowTop : 25px;
+  --verticalTimelineContentMarginLeft : 57px;
+
 
   /* Header section variables */
   --headerImgShadow : 0  0  1px 1px var(--secondaryColor);

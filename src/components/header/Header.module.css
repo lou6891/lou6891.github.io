@@ -3,6 +3,7 @@
     color: var(--contentBorderColor);
     border-radius: 50px;
     justify-content: center;
+    padding: 0 3%;
 }
 
 .header_wrapper{
@@ -15,7 +16,7 @@
 
     border-color: var(--contentBorderColor);
     border-style: solid;
-    border-width: var(--borderWitdh);
+    border-width: var(--borderWidth);
     border-radius: var(--mainBorderRadius);
 
     justify-content: center;

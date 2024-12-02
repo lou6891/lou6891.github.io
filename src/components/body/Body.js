@@ -10,7 +10,7 @@ import { settings } from "../../parameters/settings";
 
 export default function Body({ deviceType, theme, setTheme }) {
     const headerStyles = () => {
-        if (deviceType === "Desktop") { return { height: "max-content", marginBottom: "80px" } }
+        if (deviceType === "Desktop") { return {height:"0.7%", padding : "0 3%" } }
         else { return { height: "0" } }
     }
 
@@ -85,16 +85,19 @@ export default function Body({ deviceType, theme, setTheme }) {
     return (
         <section className={classes.body}>
             <header style={headerStyles()}>
-                <div className={deviceType === "Desktop" ? classes.body_header_container_desktop : classes.body_header_container_mobile}>
-                    <ul style={{ marginBottom: deviceType === "Desktop" ? "" : "5px" }}>
+                <div className={classes.body_header_container}>
+                    <ul 
+                    className={classes.body_header_ul}
+                    // style={{ marginBottom: deviceType === "Desktop" ? "" : "5px" }}
+                    >
                         <li className={classes.header_options}
                             onClick={() => { setActivePage("About") }}
-                            style={{ color: activePage === "About" ? "var(--primaryColor)" : "", padding: deviceType === "Desktop" ? "15px 10px" : "5px 10px 15px 10px" }}>
+                            style={{ color: activePage === "About" ? "var(--primaryColor)" : "", padding: deviceType === "Desktop" ? "15px 13px" : "13px 10px 15px 10px" }}>
                             About Me
                         </li>
                         <li className={classes.header_options}
                             onClick={() => { setActivePage("Portfolio") }}
-                            style={{ color: activePage === "Portfolio" ? "var(--primaryColor)" : "", padding: deviceType === "Desktop" ? "15px 10px" : "5px 10px 15px 10px" }}>
+                            style={{ color: activePage === "Portfolio" ? "var(--primaryColor)" : "", padding: deviceType === "Desktop" ? "15px 13px" : "13px 10px 15px 10px" }}>
                             Portfolio
                         </li>
                         <ThemeToggler theme={theme} setTheme={setTheme} />
