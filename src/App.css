@@ -51,7 +51,7 @@
  
 }
 [theme = "dark"]{
-  --appBackgroundColor: #2B2A2C;
+  --appBackgroundColor: rgb(43, 42, 44);
   --contentBackgroundColor: rgb(59, 59, 62,  0.5);
   --innerBackgroundColor: rgb(80, 79, 84, 0.5);
   --otherBackgroundColor: #504f54;
@@ -60,9 +60,9 @@
   --headerBorderColor : rgb(80, 79, 84, 0.5);
   
 
-  --primaryColor : #658864;
-  --secondaryColor : #e0dede;
-  --terziaryColor : #d5d5d5;
+  --primaryColor : rgb(101, 136, 100);
+  --secondaryColor : rgb(224, 222, 222);
+  --terziaryColor : rgb(213, 213, 213);
 
   --dotBoxShadowColor :  rgb(220, 220, 220);
   /*
@@ -84,18 +84,18 @@
   --contentBackgroundColor: #d6d6d6;
   --innerBackgroundColor: #b8b8b8;
   --otherBackgroundColor: #b8b8b8;*/
-  --appBackgroundColor: #d4d4d4; 
+  --appBackgroundColor: rgb(212, 212, 212); 
   --contentBackgroundColor: rgb(184, 184, 184, 0.3);
-  --innerBackgroundColor: #b8b8b8;
-  --otherBackgroundColor: #b8b8b8;
+  --innerBackgroundColor: rgb(184, 184, 184);
+  --otherBackgroundColor: rgb(184, 184, 184);
 
   --contentBorderColor : transparent;
   --headerBorderColor : rgb(80, 79, 84, 0.5);
 
 
-  --primaryColor : #658864;
-  --secondaryColor : #484848;
-  --terziaryColor : #7b7b7b;
+  --primaryColor : rgb(101, 136, 100);
+  --secondaryColor : rgb(72, 72, 72);
+  --terziaryColor : rgb(123, 123, 123);
 
   --dotBoxShadowColor :   rgb(184, 184, 184);
 
