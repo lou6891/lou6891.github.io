@@ -5,7 +5,7 @@ import './App.css';
 import Loader from "./components/loader/Loader";
 import {personal_data} from "./parameters/data"
 import {settings} from "./parameters/settings"
-const loadingAnimationTime = 1800
+const loadingAnimationTime = 2500
 
 function App() {
 
@@ -86,7 +86,7 @@ function App() {
 
                 :
 
-                <Loader/>
+                <Loader type={"SVGText"}/>
             }
 
         </div>
