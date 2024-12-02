@@ -31,7 +31,7 @@ height: 100%; /* Full height of the section */
 
 .svg_text {
 font-family: "Mrs Saint Delafield", cursive;
-letter-spacing: 10px;
+letter-spacing: 15px;
 stroke: var(--primaryColor);
 word-break: break-word; 
 font-size: clamp(calc(var(--h1FontSizeMobile) + 40px), 30vw, calc(var(--h1FontSizeDesktop) + 100px));
