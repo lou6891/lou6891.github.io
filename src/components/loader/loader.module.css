@@ -33,10 +33,9 @@ height: 100%; /* Full height of the section */
 font-family: "Mrs Saint Delafield", cursive;
 letter-spacing: 15px;
 stroke: var(--primaryColor);
-word-break: break-word; 
-font-size: clamp(calc(var(--h1FontSizeMobile) + 40px), 30vw, calc(var(--h1FontSizeDesktop) + 100px));
+font-size: clamp(calc(var(--h1FontSizeMobile) + 30px), 20vw, calc(var(--h1FontSizeDesktop) + 90px));
 font-weight: 800;
-stroke-width: 6;
+stroke-width: 7;
 
 animation: textAnimate 3s infinite alternate;
 }

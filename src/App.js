@@ -81,10 +81,6 @@ function App() {
     }, [])
 
     return (
-        <>
-        <Helmet>
-          <meta name="theme-color" content={theme === "dark" ? "#000000" : "#ffffff"} />
-        </Helmet>
         <div className={"App"} style={{color : "white"}}
              theme={theme}
              devicetype={deviceType}
@@ -98,7 +94,7 @@ function App() {
                     */}
 
                     <section className={deviceType === "Desktop" ? "main_wrapper_desktop" : "main_wrapper_mobile"}>
-                        <Header userData={userData}  deviceType={deviceType}/>
+                        <Header userData={userData}  deviceType={deviceType} maxHeight={maxHeight}/>
                         <Body deviceType={deviceType} theme={theme} setTheme={setTheme}/>
                     </section>
                     {/*
@@ -113,7 +109,6 @@ function App() {
             }
 
         </div>
-        </>
     );
 }
 
