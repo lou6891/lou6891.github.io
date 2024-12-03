@@ -9,10 +9,6 @@ import { sorting_functions, rearrange_repo_order } from "./sorting_functions";
 import { settings } from "../../parameters/settings";
 
 export default function Body({ deviceType, theme, setTheme }) {
-    const headerStyles = () => {
-        if (deviceType === "Desktop") { return {height:"0.7%", padding : "0 3%" } }
-        else { return { height: "0" } }
-    }
 
     const [activePage, setActivePage] = React.useState(settings.LandingPage);
     const [repositoryData, setRepositoryData] = React.useState(false);
@@ -84,7 +80,7 @@ export default function Body({ deviceType, theme, setTheme }) {
 
     return (
         <section className={classes.body}>
-            <header style={headerStyles()}>
+            <header style={{maxHeight : deviceType == "desktop" ? "65px" : ""}}>
                 <div className={classes.body_header_container}>
                     <ul 
                     className={classes.body_header_ul}

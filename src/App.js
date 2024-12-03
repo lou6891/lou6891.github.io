@@ -5,7 +5,6 @@ import './App.css';
 import Loader from "./components/loader/Loader";
 import {personal_data} from "./parameters/data"
 import {settings} from "./parameters/settings"
-import { Helmet } from 'react-helmet';
 
 const loadingAnimationTime = 2500
 
@@ -34,7 +33,6 @@ function App() {
         document.documentElement.setAttribute("data-theme", theme);
     }, [theme]); // Runs whenever the theme changes
 
-    
     // Data from GitHub to load the header elements
     const [userData, setUserData] = React.useState(false)
 
@@ -94,7 +92,7 @@ function App() {
                     */}
 
                     <section className={deviceType === "Desktop" ? "main_wrapper_desktop" : "main_wrapper_mobile"}>
-                        <Header userData={userData}  deviceType={deviceType} maxHeight={maxHeight}/>
+                        <Header userData={userData}  deviceType={deviceType} />
                         <Body deviceType={deviceType} theme={theme} setTheme={setTheme}/>
                     </section>
                     {/*

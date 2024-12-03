@@ -50,12 +50,11 @@
     right: 0;
     width: 100%;
     z-index: 10;
-    min-height: 65px;
+    min-height: 55px;
 
 
     /* width: var(--bodyHeaderLenght); */
     /* float: right; */
-    min-height: content-box;
     /* border : 0 0 var(--borderWitdh) var(--borderWitdh) solid var(--headerBorderColor); */
     border-radius: var(--mainBorderRadius);
     border-color: var(--headerBorderColor);
