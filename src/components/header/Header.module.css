@@ -3,6 +3,7 @@
     color: var(--contentBorderColor);
     border-radius: 50px;
     justify-content: center;
+    padding: 0 3%;
 }
 
 .header_wrapper{
@@ -13,14 +14,15 @@
 
     top:0;
 
-    background-color: var(--contentBackgroundColor);
     border-color: var(--contentBorderColor);
     border-style: solid;
-    border-width: var(--borderWitdh);
+    border-width: var(--borderWidth);
     border-radius: var(--mainBorderRadius);
 
     justify-content: center;
     align-items: center;
+    box-sizing: border-box; 
+    display: flex;
 }
 
 .header_img_container{
@@ -28,7 +30,7 @@
 }
 
 .header_profile_img{
-    width: 100%;
+
     object-fit:cover;
     box-shadow: var(--headerImgShadow);
     border-radius: var(--secondaryBorderRadius);
@@ -38,14 +40,46 @@
 
 
 .header_title_desktop{
+    margin: var(--headerTitleMargins);
+    padding: 0;
+    font-family: "Mrs Saint Delafield", cursive;
+    letter-spacing: 4px; 
+    line-height: 1.2; 
+    font-weight: 800;
+    box-sizing: border-box; /* Include padding in size calculations */
+    overflow-wrap: break-word;
 }
 
-.header_title_mobile{
+/* .header_title_mobile{
     text-align: center;
     align-items: center;
     width: 100%;
     justify-self: center;
+    margin-top: 0px;
+    font
+} */
+
+
+
+
+.header_title_mobile {
+    margin: var(--headerTitleMargins);
+    padding: 0;
+    white-space: normal; /* Allows natural text wrapping */
+    overflow-wrap: break-word; /* Prevents breaking words */
+    word-wrap: break-word; /* For legacy browser support */
+    font-family: "Mrs Saint Delafield", cursive;
+    letter-spacing: 4px; 
+    line-height: 1.2; 
+    font-weight: 800;
 }
+
+.header_title_social_icons{
+    margin: var(--headerSocialIconsMargins);
+    display : flex; 
+}
+
+
 
 .header svg{
     width: 100%;
@@ -67,7 +101,11 @@
 
 }
 
-.header hr{
-    background-color: var(--secondaryColor);
-    color:  var(--secondaryColor);
+.credits{
+    opacity: 55%;
+    text-decoration: none;
+    color: var(--terziaryColor);
+    cursor: pointer;
+    font-size: calc(var(--pFontSize) - 3px);
 }
+

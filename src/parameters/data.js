@@ -11,18 +11,17 @@ export const personal_data = {
         
             "I am a passionate professional from Varese, Italy, with a rich international background, having lived and worked across" +
             "the USA, London, Turin, Berlin, China, Madrid, and most recently, Barcelona. \n" +
-            "\n" +
+            // "\n" +
             "My academic journey includes a Bachelor's degree in Management from ESCP Europe, where I graduated with high honors. This was " +
             "followed by a dual Master's degree from IE University in Management, and Computer Science & Business Technology, also with " +
             "high honors. \n" +
-            "\n" +
+            // "\n" +
             "My career began with a focus on quality control, project management, and business development. After working in monitoring and " +
             "control, I decided to transition to a more technical role. This led me to become a MLOps Engineer at EcoVadis, where I developed " +
             "key automation tools and implemented advanced AI solutions. \n" +
-            "\n" +
+            // "\n" +
             "I pride myself on my problem-solving skills, my ability to lead cross-cultural teams, and my relentless pursuit of excellence. I " +
-            "am always eager to connect with like-minded professionals, explore new technologies, and engage in meaningful discussions that " +
-            "challenge the status quo. Let's collaborate and make an impact together!",
+            "am always eager to connect with like-minded professionals, explore new technologies, and engage in meaningful conversations.",
 
 
         Professional_experiences :[

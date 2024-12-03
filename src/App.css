@@ -1,30 +1,70 @@
-
 :root{
-  --headerWitdh : 26%;
+  --headerWitdh : 32%;
 
-  --mainBorderRadius : 15px;
+  --mainBorderRadius : 5px;
   --secondaryBorderRadius : 10px;
 
-  --borderWitdh : 1px;
+  --borderWidth : 3px;
 
   --maxLogosWitdh : 55px;
   --maxLanguageImageWidth : 35px;
 
-  --bodyHeaderLenght : 54%;
+  --bodyHeaderLenght : 100%;
 
+  --h3Margin: 5px 0 0 0;
+
+  --timelineDotSize : 25px;
+
+  --timelineDotMarginLeft : 7px;
+
+
+   /* General Variables */
+    --h1FontSize: 35px;
+    --h2FontSize: 23px;
+    --h3FontSize: 21px;
+    --h4FontSize: 21px;
+    --h5FontSize: 15px;
+    --h6FontSize: 19px;
+    --h7FontSize: 18px;
+    --pFontSize : 13px;
+
+
+    --h1FontSizeMobile : 55px;
+    --h2FontSizeMobile: 23px;
+    --h3FontSizeMobile: 21px;
+    --h4FontSizeMobile : 20px;
+    --h5FontSizeMobile : 18px;
+    --h6FontSizeMobile : 17px;
+    --h7FontSizeMobile : 19px;
+    --pFontSizeMobile : 16px;
+    --buttonFontSizeMobile : 21px;
+
+    --h1FontSizeDesktop : 80px;
+    --h2FontSizeDesktop : 26px;
+    --h3FontSizeDesktop : 24px;
+    --h4FontSizeDesktop : 22px;
+    --h5FontSizeDesktop : 20px;
+    --h6FontSizeDesktop : 18px;
+    --h7FontSizeDesktop : 23px;
+    --pFontSizeDesktop : 19px;
+    --buttonFontSizeDesktop : 23px;
+ 
 }
 [theme = "dark"]{
-  --appBackgroundColor: #2B2A2C;
-  --contentBackgroundColor: #3B3B3E;
-  --innerBackgroundColor: #504f54;
+  --appBackgroundColor: rgb(43, 42, 44);
+  --contentBackgroundColor: rgb(59, 59, 62,  0.5);
+  --innerBackgroundColor: rgb(80, 79, 84, 0.5);
   --otherBackgroundColor: #504f54;
 
   --contentBorderColor : transparent;
+  --headerBorderColor : rgb(80, 79, 84, 0.5);
+  
 
-  --primaryColor : #fdd66d;
-  --secondaryColor : #dcdcdc;
-  --terziaryColor : #d5d5d5;
+  --primaryColor : rgb(101, 136, 100);
+  --secondaryColor : rgb(224, 222, 222);
+  --terziaryColor : rgb(213, 213, 213);
 
+  --dotBoxShadowColor :  rgb(220, 220, 220);
   /*
   Colors used in the template
   --appBackgroundColor : #111111;
@@ -40,17 +80,24 @@
 }
 
 [theme = "light"]{
-
-  --appBackgroundColor: #eeeeee;
+  /* --appBackgroundColor: #eeeeee; 
   --contentBackgroundColor: #d6d6d6;
   --innerBackgroundColor: #b8b8b8;
-  --otherBackgroundColor: #b8b8b8;
+  --otherBackgroundColor: #b8b8b8;*/
+  --appBackgroundColor: rgb(212, 212, 212); 
+  --contentBackgroundColor: rgb(184, 184, 184, 0.3);
+  --innerBackgroundColor: rgb(184, 184, 184);
+  --otherBackgroundColor: rgb(184, 184, 184);
 
   --contentBorderColor : transparent;
+  --headerBorderColor : rgb(80, 79, 84, 0.5);
 
-  --primaryColor : #658864;
-  --secondaryColor : #484848;
-  --terziaryColor : #7b7b7b;
+
+  --primaryColor : rgb(101, 136, 100);
+  --secondaryColor : rgb(72, 72, 72);
+  --terziaryColor : rgb(123, 123, 123);
+
+  --dotBoxShadowColor :   rgb(184, 184, 184);
 
   /*
   Colors used in the template
@@ -71,7 +118,11 @@
   --dotExpansion : 225px;
 
   /* app  variables */
-  --mainWrapperMargins : 3% 10% 0 10%;
+  --mainWrapperMargins : 1% 7% 2% 3%;
+
+  /* header variables */
+  --headerTitleMargins : 10px 0 0 0;
+  --headerSocialIconsMargins:  0;  
 
   /* Portfolio section variables */
   --portoflioGridLayour : 50% 50%;
@@ -83,24 +134,25 @@
   --langugeGridTemplateColumn : 15% 85%;
   --itSkillsGridTempleteColumn : auto auto auto;
 
+  --verticalTimelineContentWidth : 97%;
+  --verticalTimelineArrowTop : 28px;
+  --verticalTimelineContentMarginLeft : 57px;
+
   /* Header section variables */
   --headerImgShadow : 0  0  1px 1px var(--secondaryColor);
-  --headerImgMargin : 20px 0;
+  --headerImgMargin : 20px 0 20px 0;
 
   /* Icons*/
-  --maxLogosWitdh : 35px;
-  --HeaderIconsMargin : 7%;
+  --maxLogosWitdh : 32px;
+  --HeaderIconsMargin : 5% 5% 5% 0;
 
-  /* General Variables */
-  --h1FontSize : 45px;
-  --h2FontSize : 26px;
-  --h3FontSize : 25px;
-  --h4FontSize : 24px;
-  --h5FontSize : 23px;
-  --h6FontSize : 22px;
-  --h7FontSize : 20px;
-  --pFontSize : 19px;
-  --buttonFontSize : 20px;
+  --timelineDotSize : 35px;
+  --timelineDotMarginLeft : 2px;
+
+  /* Margins */
+  --h3Margin: 10px 0 0 0;
+
+
 }
 
 [devicetype = "Tablet"]{
@@ -109,7 +161,11 @@
   --dotExpansion : 100px;
 
   /* app  variables */
-  --mainWrapperMargins : 5% 7%;
+  --mainWrapperMargins : 1% 2%;
+
+  /* header variables */
+  --headerTitleMargins : 5px 0 0 0;
+  --headerSocialIconsMargins:  0 0 0 0;  
 
   /* Portfolio section variables */
   --portoflioGridLayour : 100%;
@@ -120,6 +176,10 @@
   --langugeGridTemplateColumn : 17% 83%;
   --itSkillsGridTempleteColumn : auto auto auto;
 
+  --verticalTimelineContentWidth : 97%;
+  --verticalTimelineArrowTop : 25px;
+  --verticalTimelineContentMarginLeft : 52px;
+
   /* Header section variables */
   --headerImgShadow : 0  0  1px 1px var(--secondaryColor);
   --headerImgMargin : 20px 15px 20px 20px;
@@ -128,16 +188,20 @@
   --maxLogosWitdh : 40px;
   --HeaderIconsMargin : 10px;
 
-  /* General Variables */
-  --h1FontSize : 40px;
-  --h2FontSize : 25px;
-  --h3FontSize : 24px;
-  --h4FontSize : 23px;
-  --h5FontSize : 22px;
-  --h6FontSize : 21px;
-  --h7FontSize : 20px;
+  --h1FontSize : 45px;
+  --h2FontSize : 26px;
+  --h3FontSize : 21px;
+  --h4FontSize : 21px;
+  --h5FontSize : 19px;
+  --h6FontSize : 17px;
+  --pFontSize : 15px;
+  --buttonFontSize : 20px;
+  
   --pFontSize : 19px;
   --buttonFontSize : 20px;
+
+    /* Margins */
+    --h3Margin: 5px 0 0 0;
 
 }
 
@@ -147,7 +211,11 @@
   --dotExpansion : 100px;
 
   /* app  variables */
-  --mainWrapperMargins : 4% 5%;
+  --mainWrapperMargins : 0% 0%;
+
+  /* header variables */
+  --headerTitleMargins :  5px 5px  0 5px;
+  --headerSocialIconsMargins:  0 0 0px 0px;
 
   /* Portfolio section variables */
   --portoflioGridLayour : 100%;
@@ -158,24 +226,21 @@
   --langugeGridTemplateColumn : 30% 70% ;
   --itSkillsGridTempleteColumn : auto auto;
 
+  --verticalTimelineContentWidth : 86%;
+  --verticalTimelineArrowTop : 25px;
+  --verticalTimelineContentMarginLeft : 57px;
+
+
   /* Header section variables */
   --headerImgShadow : 0  0  1px 1px var(--secondaryColor);
-  --headerImgMargin : 20px 15px 20px 20px;
+  --headerImgMargin : 5px 0px 7px 1px;
 
   /* Icons*/
   --maxLogosWitdh : 30px;
   --HeaderIconsMargin : 5px;
 
-  /* General Variables */
-  --h1FontSize : 35px;
-  --h2FontSize : 23px;
-  --h3FontSize : 22px;
-  --h4FontSize : 21px;
-  --h5FontSize : 20px;
-  --h6FontSize : 19px;
-  --h7FontSize : 18px;
-  --pFontSize : 17px;
-  --buttonFontSize : 18px;
+    /* Margins */
+    --h3Margin: 10px 0 0 1px;
 }
 
 
@@ -207,54 +272,75 @@
   margin: var(--mainWrapperMargins);
 }
 
+body {
+  background-color: var(--appBackgroundColor);
+  color: var(--primaryColor);
+}
+
 h1{
-  font-size: var(--h1FontSize);
+  font-size: clamp(var(--h1FontSizeMobile), 5vw, var(--h1FontSizeDesktop));
   color : var(--primaryColor);
   cursor: default;
 }
 
 h2{
-  font-size: var(--h2FontSize);
+  font-size: clamp(var(--h2FontSizeMobile), 2vw, var(--h2FontSizeDesktop));
+  font-style: italic;
+
   color: var(--secondaryColor);
   cursor: default;
 }
 
 h3{
-  font-size: var(--h3FontSize);
+  font-size: clamp(var(--h3FontSizeMobile), 2.5vw, var(--h3FontSizeDesktop));
+  font-style: italic;
+
   color: var(--secondaryColor);
   cursor: default;
 }
 
 h4{
-  font-size: var(--h4FontSize);
+  font-size: clamp(var(--h4FontSizeMobile), 2.5vw, var(--h4FontSizeDesktop));
   color: var(--secondaryColor);
   font-weight: normal;
   cursor: default;
 }
 
 h5{
-  font-size: var(--h5FontSize);
+  font-size: clamp(var(--h5FontSizeMobile), 2vw, var(--h5FontSizeDesktop));
   color: var(--secondaryColor);
   font-weight: normal;
   cursor: default;
 }
 
 h6{
-  font-size: var(--h6FontSize);
+  font-size: clamp(var(--h6FontSizeMobile), 2vw, var(--h6FontSizeDesktop));
   color: var(--secondaryColor);
   font-weight: normal;
   cursor: default;
 }
-
+/* 
+h7{
+  font-size: clamp(var(--h7FontSizeMobile), 2vw, var(--h7FontSizeDesktop));
+  color: var(--secondaryColor);
+  font-weight: normal;
+  cursor: default;
+} */
 
 p{
-  font-size: var(--pFontSize);
+  font-size: clamp(var(--pFontSizeMobile), 2vw, var(--pFontSizeDesktop)); 
+  color: var(--secondaryColor);
+  cursor: default;
+}
+
+li{
+  font-size: clamp(calc(var(--pFontSizeMobile) + 2px) ,  2vw,calc(var(--pFontSizeDesktop) + 2px)); 
   color: var(--secondaryColor);
   cursor: default;
 }
 
 button{
-  font-size: var(--buttonFontSize);
+  font-size: clamp(var(--buttonFontSizeMobile), 2vw, var(--buttonFontSizeDesktop));
 }
 
 

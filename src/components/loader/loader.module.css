@@ -1,4 +1,3 @@
-
 .body{
     margin: 0;
     overflow: hidden;
@@ -12,10 +11,52 @@
     background-color: var(--appBackgroundColor);
 }
 
+/* -- Loading svg text -- */
+.svg_body {
+        height: 100vh; /* Full screen height */
+        margin: 0; /* Remove default browser margins */
+        display: flex;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        padding: 0 2rem; /* Padding on left and right */
+        background: var(--appBackgroundColor);
+        box-sizing: border-box; /* Ensure padding is included in the size */
+      }
+
+.svg {
+width: 100%; /* Full width of the section */
+max-width: calc(100vw - 4rem); /* Account for left and right padding */
+height: 100%; /* Full height of the section */
+}
+
+.svg_text {
+font-family: "Mrs Saint Delafield", cursive;
+letter-spacing: 15px;
+stroke: var(--primaryColor);
+font-size: clamp(calc(var(--h1FontSizeMobile) + 30px), 20vw, calc(var(--h1FontSizeDesktop) + 90px));
+font-weight: 800;
+stroke-width: 7;
+
+animation: textAnimate 3s infinite alternate;
+}
+
+@keyframes textAnimate {
+0% {
+        stroke-dasharray: 0 50%;
+        stroke-dashoffset: 20%;
+        fill: var(--secondaryColor);
+}
+
+100% {
+        stroke-dasharray: 50% 0;
+        stroke-dashoffset: -20%;
+        fill: var(--secondaryColor);
+}
+}
 
 
 
-/* -- Loading thingy --*/
+/* -- Loading dots --*/
 .loadingDot {
     border-radius:100%;
     height:var(--dotSizes);

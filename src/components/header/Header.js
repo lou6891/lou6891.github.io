@@ -2,20 +2,20 @@ import React from "react"
 import classes from "./Header.module.css"
 import {personal_data} from "../../parameters/data"
 
-export default function Header({userData,deviceType}){
+export default function Header({userData, deviceType}){
 
     const headerWrapperStylesSelector = ()=>{
         if(deviceType === "Desktop"){
             return {
                 position : "sticky",
-                padding : "50px 15%",
+                padding : "3% 15px 2% 15px",
                 flexDirection : "column",
             }
         }
         else{
             return{
-                padding : "3% 15px",
-                marginBottom : "1rem",
+                padding : "3% 15px 2% 15px",
+                marginBottom : "0",
             }
         }
     }
@@ -24,7 +24,8 @@ export default function Header({userData,deviceType}){
     const SocialIcons = ()=>{
         return(
             <span
-                style={{display : "flex", width : "100%", justifyContent : deviceType === "Desktop" ? "space-evenly" : "space-around"}}>
+            className={classes.header_title_social_icons}
+                style={{justifyContent : deviceType === "Desktop" ? "space-between" : "space-around"}}>
                     {personal_data.GitHub_name
                         ?
                         <svg xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +40,7 @@ export default function Header({userData,deviceType}){
 
                 {personal_data.Linkedin_url
                     ?
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" 
                          onClick={()=>{window.open(personal_data.Linkedin_url, '_blank', 'noreferrer')}}
                     >
                         <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
@@ -65,7 +66,7 @@ export default function Header({userData,deviceType}){
 
     return(
         <header className={classes.header}
-                 style={{ marginBottom : deviceType !== "Desktop" ? "1rem" : ""}}
+                 style={{ marginBottom : deviceType !== "Desktop" ? "0" : ""}}
         >
             <section
                 className={classes.header_wrapper}
@@ -76,11 +77,11 @@ export default function Header({userData,deviceType}){
                     style={{ display : deviceType === "Desktop" ? "" : "flex"}}
                 >
 
-                            <img src={userData["avatar_url"]}
-                                 alt={"GitHub profile"}
-                                 style={{maxWidth :deviceType === "Desktop" ? "90%" : "30%" }}
-                                 className={classes.header_profile_img }
-                            />
+                    <img src={userData["avatar_url"]}
+                            alt={"Profile Picture"}
+                            style={{maxWidth: deviceType === "Desktop" ? "75%" : "50%"}}
+                            className={classes.header_profile_img }
+                    />
 
 
 
@@ -97,18 +98,21 @@ export default function Header({userData,deviceType}){
 
                             <div style={{padding : "2% 2%", width : "100%", justifyContent : "space-evenly", display : "flex", flexDirection : "column"}}>
 
-                                <h1 className={ classes.header_title_mobile}>
+                                <h1 className={ classes.header_title_mobile}
+                                style={{textAlign : "center"}}
+                                >
                                     {personal_data.User_Name_Surname}
                                 </h1>
+                                
 
                                 {
                                     deviceType === "Tablet"
                                     ?
                                         <div>
                                             <hr/>
-                                            <h5 style={{marginTop : "15px", marginBottom : "15px"}}>
+                                            <h2 style={{marginTop : "15px", marginBottom : "15px"}}>
                                                 {userData["bio"]}
-                                            </h5>
+                                            </h2>
                                             <hr/>
                                         </div>
                                             : ""
@@ -128,9 +132,9 @@ export default function Header({userData,deviceType}){
                     ?
                         <div>
                             <hr/>
-                            <h5>
+                            <h2 style={{marginTop : "15px", marginBottom : "15px"}}>
                                 {userData["bio"]}
-                            </h5>
+                            </h2>
                             <hr/>
                         </div>
                         : ""
@@ -142,9 +146,9 @@ export default function Header({userData,deviceType}){
                         ?
                         <div>
                             <hr/>
-                            <h5>
+                            <h2 style={{marginTop : "15px", marginBottom : "15px"}}>
                                 {userData["bio"]}
-                            </h5>
+                            </h2>
                             <hr/>
                             <SocialIcons/>
                         </div>

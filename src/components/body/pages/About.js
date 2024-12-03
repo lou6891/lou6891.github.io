@@ -5,6 +5,7 @@ import {languageSymbols} from "../../../parameters/languageSymbols";
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
+
 const iconSize = "100px"
 
 // https://stephane-monnot.github.io/react-vertical-timeline/#/
@@ -22,6 +23,42 @@ export default function About({theme}){
     React.useEffect(()=>{
         setPrimaryColor(getComputedStyle(ref.current).getPropertyValue('--secondaryColor'))
     }, [theme, ref])
+
+    const VerticalTimelineHeaderModified = ({index, ProfExp, title_field_name, subtitle__field_name, list_field_name}) => {
+        return(
+            <VerticalTimelineElement
+                key={index}
+                className="vertical-timeline-element"
+                contentArrowStyle={{ borderRight: '8px solid  var(--innerBackgroundColor)' , top : "var(--verticalTimelineArrowTop)"}}
+                contentStyle={{ background: "var(--contentBackgroundColor)",  top : "-17px", boxShadow : "2px 2px 2px 2px var(--innerBackgroundColor)" , marginLeft : "var(--verticalTimelineContentMarginLeft)", width : "var(--verticalTimelineContentWidth)", padding : "10px 10px 10px 16px"} }
+
+                iconStyle={{ background : "var(--secondaryColor)", 
+                    width : "var(--timelineDotSize)" , 
+                    height : "var(--timelineDotSize)", 
+                    marginLeft : "var(--timelineDotMarginLeft)", 
+                    boxShadow :"var(--dotBoxShadowColor) 0px 0px 0px 4px, rgba(0, 0, 0, 0.08) 0px 2px 0px 0px inset, rgba(0, 0, 0, 0.05) 0px 3px 0px 4px"
+                    // rgb(255, 255, 255) 0px 0px 0px 4px, rgba(0, 0, 0, 0.08) 0px 2px 0px 0px inset, rgba(0, 0, 0, 0.05) 0px 3px 0px 4px
+                    // 0 0 0 4px #fff, inset 0 2px 0 rgba(0, 0, 0, .08), 0 3px 0 4px rgba(0, 0, 0, .05)
+                }}
+                style={{marginBottom : "7%", marginTop : "7%"}}
+                dateClassName={classes.date}
+                date={ProfExp["date_start"] +" - "+ ProfExp["date_end"]}
+            >
+                <h4>{ProfExp[title_field_name]}</h4>
+                <h6>{ProfExp[subtitle__field_name]}</h6>
+                <ul className={classes.about_main}>
+                    {ProfExp[list_field_name].map((value, index)=>{
+                        return(
+                            <li key={index} className={classes.about_main}>
+                                {value}
+                            </li>
+                        )
+                    })}
+                </ul>
+            </VerticalTimelineElement>
+        )
+    }
+
 
 
     return (
@@ -42,8 +79,9 @@ export default function About({theme}){
                             .split('\n')
                             .map((line, index) => (
                                 <React.Fragment key={index}>
+                                    <p key={index} style={{ marginBottom: "7px", lineHeight: "1.3", fontSize: "clamp(calc(var(--pFontSizeMobile) + 1px) ,  2vw,calc(var(--pFontSizeDesktop) + 2px))" }}>
                                     {line}
-                                    <br />
+                                    </p>
                                 </React.Fragment>
                             ))}
                         </h5>
@@ -63,32 +101,22 @@ export default function About({theme}){
 
                         <VerticalTimeline
                             lineColor={primaryColor}
+                            className={classes.vertical_timeline}
+                            layout={"1-column"}
                         >
                         {
                             personal_data["About_Page"]["Professional_experiences"].map((ProfExp, index)=>{
-                                return(
-                                <VerticalTimelineElement
+                                let title_field_name = "company_name"
+                                let subtitle__field_name = "position_name"
+                                let list_field_name = "position_information"
+                                return(<VerticalTimelineHeaderModified
                                     key={index}
-                                    className="vertical-timeline-element"
-                                    contentArrowStyle={{ borderRight: '8px solid  var(--innerBackgroundColor)' }}
-                                    contentStyle={{ background: "var(--innerBackgroundColor)", color: '#fff' }}
-                                    iconStyle={{ background : "var(--secondaryColor)"}}
-                                    dateClassName={classes.date}
-                                    date={ProfExp["date_start"] +" - "+ ProfExp["date_end"]}
-                                >
-                                    <h4>{ProfExp["company_name"]}</h4>
-                                    <h6>{ProfExp["position_name"]}</h6>
-                                    <ul>
-                                        {ProfExp["position_information"].map((value, index)=>{
-                                            return(
-                                                <li key={index}>
-                                                    {value}
-                                                </li>
-                                            )
-                                        })}
-                                    </ul>
-                                </VerticalTimelineElement>
-                                )
+                                    index={index}
+                                    ProfExp={ProfExp}
+                                    title_field_name={title_field_name}
+                                    subtitle__field_name={subtitle__field_name}
+                                    list_field_name={list_field_name}
+                                />)
                             })
                         }
                     </VerticalTimeline>
@@ -107,37 +135,23 @@ export default function About({theme}){
 
                         <VerticalTimeline
                             lineColor={primaryColor}
+                            className={classes.vertical_timeline}
+                            layout={"1-column"}
                         >
                             {
                                 personal_data["About_Page"]["Education"].map((eduExp, index)=>{
-                                    return(
-                                        <VerticalTimelineElement
-                                            key={index}
-                                            className="vertical-timeline-element"
-                                            contentArrowStyle={{ borderRight: '8px solid  var(--innerBackgroundColor)' }}
-                                            contentStyle={{ background: "var(--innerBackgroundColor)", color: '#fff' }}
-                                            iconStyle={{ background : "var(--secondaryColor)"}}
-                                            dateClassName={classes.date}
-                                            date={eduExp["date_start"] +" - "+ eduExp["date_end"]}
-                                        >
-                                            <h4 className="vertical-timeline-element-title">
-                                                {eduExp["school_name"]}
-                                            </h4>
-                                            <h6 className="vertical-timeline-element-subtitle">
-                                                {eduExp["program"]}
-                                            </h6>
-                                            <ul>
-                                                {eduExp["information"].map((value, index)=>{
-                                                    return(
-                                                        <li key={index}>
-                                                            {value}
-                                                        </li>
-                                                    )
-                                                })}
-                                            </ul>
+                                    let title_field_name = "school_name"
+                                    let subtitle__field_name = "program"
+                                    let list_field_name = "information"
 
-                                        </VerticalTimelineElement>
-                                    )
+                                    return(<VerticalTimelineHeaderModified
+                                        key={index}
+                                        index={index}
+                                        ProfExp={eduExp}
+                                        title_field_name={title_field_name}
+                                        subtitle__field_name={subtitle__field_name}
+                                        list_field_name={list_field_name}
+                                    />)
                                 })
                             }
 

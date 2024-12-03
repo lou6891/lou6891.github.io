@@ -5,16 +5,33 @@ import './App.css';
 import Loader from "./components/loader/Loader";
 import {personal_data} from "./parameters/data"
 import {settings} from "./parameters/settings"
-const loadingAnimationTime = 1800
+
+const loadingAnimationTime = 2500
 
 function App() {
 
     // Sets the theme of the website,
     // default detect the one used by the system of the user
-    const [theme, setTheme] = React.useState(()=>{
-        if(window.matchMedia("(prefers-color-scheme: dark)").matches){ return "dark" }
-        else { return "light" }
-    })
+    const [theme, setTheme] = React.useState(() => {
+        return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    });
+
+    React.useEffect(() => {
+        // Create or select the theme-color meta tag
+        let metaTag = document.querySelector('meta[name="theme-color"]');
+        if (!metaTag) {
+            metaTag = document.createElement("meta");
+            metaTag.setAttribute("name", "theme-color");
+            document.head.appendChild(metaTag);
+        }
+
+        // Set the theme color based on the current theme
+        const themeColor = theme === "dark" ? "#000000" : "#ffffff"; // Black for dark, white for light
+        metaTag.setAttribute("content", themeColor);
+
+        // Update the theme attribute on the root HTML element
+        document.documentElement.setAttribute("data-theme", theme);
+    }, [theme]); // Runs whenever the theme changes
 
     // Data from GitHub to load the header elements
     const [userData, setUserData] = React.useState(false)
@@ -75,7 +92,7 @@ function App() {
                     */}
 
                     <section className={deviceType === "Desktop" ? "main_wrapper_desktop" : "main_wrapper_mobile"}>
-                        <Header userData={userData}  deviceType={deviceType}/>
+                        <Header userData={userData}  deviceType={deviceType} />
                         <Body deviceType={deviceType} theme={theme} setTheme={setTheme}/>
                     </section>
                     {/*
@@ -86,7 +103,7 @@ function App() {
 
                 :
 
-                <Loader/>
+                <Loader type={"SVGText"}/>
             }
 
         </div>
