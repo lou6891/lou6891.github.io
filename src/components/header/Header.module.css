@@ -44,6 +44,8 @@
     letter-spacing: 4px; 
     line-height: 1.2; 
     font-weight: 800;
+    box-sizing: border-box; /* Include padding in size calculations */
+    overflow-wrap: break-word;
 }
 
 /* .header_title_mobile{
@@ -61,8 +63,9 @@
 .header_title_mobile {
     margin: var(--headerTitleMargins);
     padding: 0;
-    white-space: pre-line; 
-    word-break: break-word; 
+    white-space: normal; /* Allows natural text wrapping */
+    overflow-wrap: break-word; /* Prevents breaking words */
+    word-wrap: break-word; /* For legacy browser support */
     font-family: "Mrs Saint Delafield", cursive;
     letter-spacing: 4px; 
     line-height: 1.2; 

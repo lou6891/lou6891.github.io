@@ -1,5 +1,5 @@
 :root{
-  --headerWitdh : 30%;
+  --headerWitdh : 32%;
 
   --mainBorderRadius : 5px;
   --secondaryBorderRadius : 10px;
@@ -29,25 +29,25 @@
     --pFontSize : 13px;
 
 
-    --h1FontSizeMobile : 45px;
-    --h2FontSizeMobile: 20px;
-    --h3FontSizeMobile: 18px;
-    --h4FontSizeMobile : 17px;
-    --h5FontSizeMobile : 15px;
-    --h6FontSizeMobile : 13px;
-    --h7FontSizeMobile : 16px;
-    --pFontSizeMobile : 13px;
-    --buttonFontSizeMobile : 18px;
+    --h1FontSizeMobile : 55px;
+    --h2FontSizeMobile: 23px;
+    --h3FontSizeMobile: 21px;
+    --h4FontSizeMobile : 20px;
+    --h5FontSizeMobile : 18px;
+    --h6FontSizeMobile : 17px;
+    --h7FontSizeMobile : 19px;
+    --pFontSizeMobile : 16px;
+    --buttonFontSizeMobile : 21px;
 
-    --h1FontSizeDesktop : 90px;
-    --h2FontSizeDesktop : 26px;
-    --h3FontSizeDesktop : 21px;
-    --h4FontSizeDesktop : 21px;
-    --h5FontSizeDesktop : 19px;
-    --h6FontSizeDesktop : 17px;
-    --h7FontSizeDesktop : 20px;
-    --pFontSizeDesktop : 17px;
-    --buttonFontSizeDesktop : 20px;
+    --h1FontSizeDesktop : 80px;
+    --h2FontSizeDesktop : 28px;
+    --h3FontSizeDesktop : 25px;
+    --h4FontSizeDesktop : 23px;
+    --h5FontSizeDesktop : 21px;
+    --h6FontSizeDesktop : 19px;
+    --h7FontSizeDesktop : 24px;
+    --pFontSizeDesktop : 20px;
+    --buttonFontSizeDesktop : 24px;
  
 }
 [theme = "dark"]{
@@ -121,7 +121,7 @@
   --mainWrapperMargins : 2% 7% 2% 3%;
 
   /* header variables */
-  --headerTitleMargins : 0 0 0 0;
+  --headerTitleMargins : 10px 0 0 0;
   --headerSocialIconsMargins:  0 0 0 0;  
 
   /* Portfolio section variables */
@@ -164,7 +164,7 @@
   --mainWrapperMargins : 1% 2%;
 
   /* header variables */
-  --headerTitleMargins : 0 0 0 0;
+  --headerTitleMargins : 5px 0 0 0;
   --headerSocialIconsMargins:  0 0 0 0;  
 
   /* Portfolio section variables */
@@ -214,7 +214,7 @@
   --mainWrapperMargins : 0% 0%;
 
   /* header variables */
-  --headerTitleMargins :  0 5px  0 5px;
+  --headerTitleMargins :  5px 5px  0 5px;
   --headerSocialIconsMargins:  0 0 0px 0px;
 
   /* Portfolio section variables */
@@ -272,8 +272,13 @@
   margin: var(--mainWrapperMargins);
 }
 
+body {
+  background-color: var(--appBackgroundColor);
+  color: var(--primaryColor);
+}
+
 h1{
-  font-size: clamp(var(--h1FontSizeMobile), 10vw, var(--h1FontSizeDesktop));
+  font-size: clamp(var(--h1FontSizeMobile), 5vw, var(--h1FontSizeDesktop));
   color : var(--primaryColor);
   cursor: default;
 }
