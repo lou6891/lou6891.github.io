@@ -49,13 +49,24 @@ function App() {
 
     const [deviceType, setDeviceType] = React.useState(()=>{ return deviceTypeSetterFunction() })
 
+    const [avatarUrl, setAvatarUrl] = React.useState(null);
+
+
     React.useEffect (()=>{
 
-        // Get data from GitHub
+         // Get data from GitHub
         const url = "https://api.github.com/users/" + personal_data.GitHub_name
         fetch(url)
             .then(response => response.json())
-            .then(data => { setUserData(data)} )
+            .then(data => { 
+                setUserData(data)
+                const img = new Image();
+                img.src = data["avatar_url"];
+                img.onload = () => {
+                    setAvatarUrl(img.src)
+                    console.log("IMG LOADED ", img.src)
+                }
+            } )
             .catch((e) => console.log(e))
 
         // Await time for the loading animation
@@ -92,7 +103,7 @@ function App() {
                     */}
 
                     <section className={deviceType === "Desktop" ? "main_wrapper_desktop" : "main_wrapper_mobile"}>
-                        <Header userData={userData}  deviceType={deviceType} />
+                        <Header userData={userData}  deviceType={deviceType} avatarUrl={avatarUrl} />
                         <Body deviceType={deviceType} theme={theme} setTheme={setTheme}/>
                     </section>
                     {/*

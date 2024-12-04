@@ -2,7 +2,7 @@ import React from "react"
 import classes from "./Header.module.css"
 import {personal_data} from "../../parameters/data"
 
-export default function Header({userData, deviceType}){
+export default function Header({userData, deviceType, avatarUrl}){
 
     const headerWrapperStylesSelector = ()=>{
         if(deviceType === "Desktop"){
@@ -77,10 +77,11 @@ export default function Header({userData, deviceType}){
                     style={{ display : deviceType === "Desktop" ? "" : "flex"}}
                 >
 
-                    <img src={userData["avatar_url"]}
+                    <img src={avatarUrl}
                             alt={"Profile Picture"}
                             style={{maxWidth: deviceType === "Desktop" ? "75%" : "50%"}}
                             className={classes.header_profile_img }
+                            loading="lazy"
                     />
 
 
