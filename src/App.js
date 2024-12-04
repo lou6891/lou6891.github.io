@@ -64,7 +64,6 @@ function App() {
                 img.src = data["avatar_url"];
                 img.onload = () => {
                     setAvatarUrl(img.src)
-                    console.log("IMG LOADED ", img.src)
                 }
             } )
             .catch((e) => console.log(e))
