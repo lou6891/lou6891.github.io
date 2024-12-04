@@ -33,9 +33,9 @@ height: 100%; /* Full height of the section */
 font-family: "Mrs Saint Delafield", cursive;
 letter-spacing: 15px;
 stroke: var(--primaryColor);
-font-size: clamp(calc(var(--h1FontSizeMobile) + 30px), 20vw, calc(var(--h1FontSizeDesktop) + 90px));
-font-weight: 800;
-stroke-width: 7;
+font-size: clamp(calc(var(--h1FontSizeMobile) + 40px), 25vw, calc(var(--h1FontSizeDesktop) + 90px));
+font-weight: var(--SVGLoaderFonteight);
+stroke-width: 1;
 
 animation: textAnimate 3s infinite alternate;
 }
@@ -44,13 +44,13 @@ animation: textAnimate 3s infinite alternate;
 0% {
         stroke-dasharray: 0 50%;
         stroke-dashoffset: 20%;
-        fill: var(--secondaryColor);
+        fill: var(--SVGLoaderImgImageColor);
 }
 
 100% {
         stroke-dasharray: 50% 0;
         stroke-dashoffset: -20%;
-        fill: var(--secondaryColor);
+        fill: var(--SVGLoaderImgImageColor);
 }
 }
 

@@ -65,6 +65,8 @@
   --terziaryColor : rgb(213, 213, 213);
 
   --dotBoxShadowColor :  rgb(220, 220, 220);
+  --SVGLoaderImgImageColor : #5b5f5c;;
+
   /*
   Colors used in the template
   --appBackgroundColor : #111111;
@@ -98,6 +100,10 @@
   --terziaryColor : rgb(123, 123, 123);
 
   --dotBoxShadowColor :   rgb(184, 184, 184);
+  --SVGLoaderImgImageColor : rgb(72, 72, 72);
+
+
+
 
   /*
   Colors used in the template
@@ -152,6 +158,9 @@
   /* Margins */
   --h3Margin: 10px 0 0 0;
 
+  /*Loader*/
+  --SVGLoaderFonteight : 800;
+  --SVGLoaderStrokeWidth : 4;
 
 }
 
@@ -203,6 +212,12 @@
     /* Margins */
     --h3Margin: 5px 0 0 0;
 
+    
+  /*Loader*/
+  --SVGLoaderFonteight : 800;
+  --SVGLoaderStrokeWidth : 6;
+
+
 }
 
 [devicetype = "Mobile"]{
@@ -241,6 +256,12 @@
 
     /* Margins */
     --h3Margin: 10px 0 0 1px;
+
+    
+  /*Loader*/
+  --SVGLoaderFonteight : 800;
+  --SVGLoaderStrokeWidth : 6;
+
 }
 
 
