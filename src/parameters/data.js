@@ -26,10 +26,61 @@ export const personal_data = {
 
         Professional_experiences :[
             {
+                company_name: "Centro Style S.P.A",
+                company_information  : "Family company that serve the need of optical show in more than 80 countries since 40 years",
+                date_start: "September 2025",
+                date_end: "Present",
+                locations: [
+                    "Barcelona, Catalonia, Spain",
+                    "Varese, IT",
+                ],
+                position_name: "Digital Innovation Manager",
+                position_information: [
+                    "Developing and implementing digital innovation strategies to enhance business processes and customer experiences.",
+                    "Improving internal workflows through the adoption of cutting-edge technologies.",
+                    "Curating new training programs to upskill employees in digital tools and methodologies.",
+                ]
+            },
+            {
+                company_name: "Personal goal pursuit",
+                company_information: "",
+                date_start: "April 2025",
+                date_end: "September 2025",
+                locations: [
+                    "Barcelona, Catalonia, Spain"
+                ],
+                position_name: "Personal Projects",
+                position_information: [
+                    "Took some time to develop personal projects and focus on my personal growth",
+                    "Developed AI based multi bank investment dashboard",
+                    "Developed and managed new cooking recipes",
+                    "60% higher traveling and leisure",
+                    "1000% boost to social time with perfect friend retention",
+                ]
+            },
+            {
                 company_name: "EcoVadis",
                 company_information: "A global leader in sustainability ratings for supply chains, helping organizations improve their environmental and social practices.",
-                date_start: "February 2023",
-                date_end: "Present",
+                date_start: "March 2025",
+                date_end: "April 2025",
+                locations: [
+                    "Barcelona, Catalonia, Spain"
+                ],
+                position_name: "Mid MLOps Engineer",
+                position_information: [
+                    "Developed and deployed Openai based Chatbot API to over 12 000 clients",
+                    "Created multiple AI agents to perform language detection, content filtering, RAG and data manipulation",
+                    "Developed ad-hoc tests to measure performance of AI agents",
+                    "Refined AI agents to have accuracy > 97 %",
+                    "Developed Azure CICD pipeline for unit and integration testing",
+                    "Weekly Monitoring and debugging of clients feedbacks"
+                ]
+            },
+            {
+                company_name: "EcoVadis",
+                company_information: "A global leader in sustainability ratings for supply chains, helping organizations improve their environmental and social practices.",
+                date_start: "February 2024",
+                date_end: "April 2025",
                 locations: [
                     "Barcelona, Catalonia, Spain"
                 ],
